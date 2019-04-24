@@ -4,18 +4,22 @@
   "private": true,
   "homepage": "https://tbsse.github.io/my-app",
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
+    "@material-ui/icons": "^3.0.2",
+    "fg-loadcss": "^2.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-vis": "^1.11.7",
+    "stylus": "^0.54.5"
   },
   "scripts": {
-
-
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
+    "css": "stylus -w src/stylus/index.styl -o src"
   },
   "eslintConfig": {
     "extends": "react-app"
