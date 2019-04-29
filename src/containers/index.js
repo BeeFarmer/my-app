@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import '../App.css';
-import { ContainedButtons } from '../components/';
-import { SimpleTable } from '../components/';
-import { FontAwesome } from '../components/';
+import Header  from './header';
+import SideBar  from './nav';
 
-function App() {
-    return (
-      <div className="App">
-        hello;
-        <ContainedButtons></ContainedButtons>
-        <SimpleTable></SimpleTable>
-        <FontAwesome></FontAwesome>
+
+class App extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      open : false
+    };
+  }
+
+  handleNavOpen = () =>{
+    this.setState({open : !this.state.open});
+  };
+
+  render()
+  {
+    return(
+      <div className= 'App' >
+         <Header SideBarOpen={this.handleNavOpen} listOpenState = {this.state.open}/>
       </div>
     );
+  }
 }
 
 export default App;

@@ -6,3 +6,4 @@ export * from '@material-ui/core/';
 export { default as ContainedButtons } from './bottons';
 export { default as SimpleTable } from './tables';
 export { default as FontAwesome } from './icons';
+export { default as ButtonAppBar} from './header';

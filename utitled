@@ -1,0 +1,4 @@
+<div className= 'App' >
+   <Header siderBarOpen={this.handleNavOpen}/>
+   <SideBar stateChange = {this.state.open}/>
+</div>
