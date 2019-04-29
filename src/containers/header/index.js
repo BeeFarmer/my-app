@@ -61,7 +61,7 @@ class Header extends React.Component
             </div>
 
             <Typography variant="h6" color="inherit" className = "grow">
-              News
+              App
             </Typography>
 
             <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>
