@@ -144,14 +144,26 @@ iframe {
 .grow {
   flex-grow: 1;
 }
+.titleColor {
+  color: #fff;
+}
 .list {
   border-right: 2px solid #000;
-  margin-top: 0px;
+  margin: 0px;
   height: 100vh;
+  width: 240px;
   background-color: #ff0;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: fixed;
 }
-.root {
-  height: 100vh;
+.move-right {
+  margin-left: 300px;
+  margin-top: 50px;
+}
+.default {
+  margin-left: 100px;
+  margin-top: 50px;
 }
 .ListItem {
   padding-left: 0px;

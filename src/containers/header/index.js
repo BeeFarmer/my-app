@@ -21,7 +21,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import List from '@material-ui/core/List';
 import SideBar  from '../nav';
 import Collapse from '@material-ui/core/Collapse';
-
+import { NavLink } from 'react-router-dom';
 
 class Header extends React.Component
 {
@@ -60,8 +60,8 @@ class Header extends React.Component
             </ListItem>
             </div>
 
-            <Typography variant="h6" color="inherit" className = "grow">
-              MyApp
+            <Typography variant="h6" className = "grow">
+              <NavLink to="/" className = "titleColor">MyApp</NavLink>
             </Typography>
 
             <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>
@@ -78,7 +78,7 @@ class Header extends React.Component
         </AppBar>
 
 
-        <div >
+        <div>
         <List>
           <Collapse in={this.props.listOpenState} timeout="auto" unmountOnExit>
             <div className="list">

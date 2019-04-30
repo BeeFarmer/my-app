@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -15,6 +14,9 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import Divider from '@material-ui/core/Divider';
 import DeleteIcon from '@material-ui/icons/Delete';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
+import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
 
 
 
@@ -39,21 +41,21 @@ class SideBar extends React.Component
     const {open} = this.state;
     return(
       <div>
-      <List component="nav">
-        <ListItem button>
-          <ListItemIcon>
+      <MenuList component="nav">
+        <ListItem button component = {Link} to = "/list1">
+          <ListItemIcon >
             <InboxIcon />
           </ListItemIcon>
-          <ListItemText primary="Inbox" />
+          <ListItemText primary="list1" />
         </ListItem>
 
         <Divider />
 
-        <ListItem button>
+        <ListItem button button component = {Link} to = "/list2">
           <ListItemIcon>
             <DraftsIcon />
           </ListItemIcon>
-          <ListItemText primary="Drafts" />
+          <ListItemText primary="list2" />
         </ListItem>
 
       <Divider />
@@ -62,7 +64,7 @@ class SideBar extends React.Component
         <ListItemIcon>
           <SendIcon />
         </ListItemIcon>
-        <ListItemText primary="Sent" />
+        <ListItemText primary="list3" />
       </ListItem>
 
       <Divider />
@@ -71,21 +73,21 @@ class SideBar extends React.Component
           <ListItemIcon>
             <DeleteIcon />
           </ListItemIcon>
-          <ListItemText inset primary="Delete" />
+          <ListItemText inset primary="list4" />
           {this.state.open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
 
-        <div className = "ListItem">
+        <div>
         <List>
         <Collapse in={this.state.open} timeout="auto" unmountOnExit>
 
             <List>
               <ListItem>
-                Recycle Bin
+                list4.1
               </ListItem>
               <Divider />
               <ListItem>
-                Spam
+                list4.2
               </ListItem>
             </List>
 
@@ -93,7 +95,7 @@ class SideBar extends React.Component
         </List>
         </div>
 
-      </List>
+      </MenuList>
     </div>
     );
   }
