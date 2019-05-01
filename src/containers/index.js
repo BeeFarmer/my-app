@@ -37,6 +37,7 @@ class App extends React.Component
 
              <Switch>
                <Route path = "/" component = {Home} exact/>
+               <Route path = "/my-app" component = {Home} exact/>
                <Route path = "/list1" component = {List1}/>
                <Route path = "/list2" component = {List2}/>
                <Route  component = {Error}/>
