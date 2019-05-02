@@ -137,6 +137,15 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
+.footer {
+  border: 1px solid #000;
+  margin-left: 300px;
+  width: 240px;
+  background-color: #f00;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+}
 .root {
   flex-grow: 1;
   margin-bottom: 0px;
@@ -150,12 +159,13 @@ iframe {
 .list {
   border-right: 2px solid #000;
   margin: 0px;
-  height: 100vh;
+  height: calc(100vh - 65px);
   width: 240px;
   background-color: #ff0;
   padding-left: 0px;
   padding-right: 0px;
   position: fixed;
+  overflow: scroll;
 }
 .move-right {
   margin-left: 300px;

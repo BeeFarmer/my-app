@@ -1,0 +1,43 @@
+renderNavItem(list,index,length)
+{
+  console.log(length);
+  if(list[index].subNavItems && index < length)
+  {
+    let i = index++;
+    return(
+      <React.Fragment>
+      <ListItem button onClick={this.showSubList}>
+        <ListItemIcon>
+          <DeleteIcon />
+        </ListItemIcon>
+        <ListItemText inset primary={list[index].label} />
+          {this.state.open ?  <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={this.state.open} timeout="auto" unmountOnExit>
+      {this.renderNavItem(list[index].subNavItems,0,list[index].subNavItems.length)}
+      </Collapse>
+      {this.renderNavItem(list,index++,list.length)}
+      </React.Fragment>
+
+    );
+  }
+  else if(!list[index].subNavItems && index < length)
+  {
+    return(
+      <div>
+      {console.log(index)}
+      <ListItem button>
+        <ListItemIcon>
+          <DraftsIcon />
+        </ListItemIcon>
+        <ListItemText primary={list[index].label} />
+      </ListItem>
+      {this.renderNavItem(list,index,list.length)}
+      </div >
+    );
+  }
+  else
+  {
+    return null;
+  }
+}

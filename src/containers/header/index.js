@@ -20,6 +20,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import List from '@material-ui/core/List';
 import SideBar  from '../nav';
+import DynamicSideBar from '../nav/sideBar.js'
 import Collapse from '@material-ui/core/Collapse';
 import { NavLink } from 'react-router-dom';
 
@@ -83,7 +84,7 @@ class Header extends React.Component
           <Collapse in={this.props.listOpenState} timeout="auto" unmountOnExit>
             <div className="list">
             <List component="div">
-              <SideBar/>
+              <DynamicSideBar/>
             </List>
             </div>
           </Collapse>

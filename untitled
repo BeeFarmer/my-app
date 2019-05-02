@@ -1,0 +1,18 @@
+<div>
+<ListItem button onClick={this.showSubList}>
+  <ListItemIcon>
+    <MyIcon />
+  </ListItemIcon>
+  <ListItemText inset primary={node.label} />
+    {this.state.open ?  <ExpandLess /> : <ExpandMore />}
+</ListItem>
+<Collapse in={this.state.open} timeout="auto" unmountOnExit>
+  {this.renderNavItem(node.subNavItems)}
+</Collapse>
+
+
+<Collapse in={this.state[node.label]} timeout="auto" unmountOnExit>
+<List component="div">
+  {listItems}
+</List>
+</Collapse>
