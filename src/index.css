@@ -161,6 +161,13 @@ iframe {
   padding-bottom: 20px;
   text-align: left;
 }
+.paper {
+  background-color: #fffff0 !important;
+  height: 70vh;
+}
+.templete-appbar {
+  background-color: #a52a2a !important;
+}
 .footer {
   border-top: 1px solid #e6ecf2;
   text-align: left;
@@ -195,16 +202,16 @@ iframe {
 }
 .move-right {
   padding-left: 260px;
-  padding-top: 50px;
-  padding-right: 50px;
+  width: 100vw;
 }
 .default {
   padding-left: 100px;
-  padding-top: 50px;
-  padding-right: 50px;
+  width: 100vw;
 }
 .content {
-  min-height: calc(100vh - 114px);
+  min-height: calc(100vh - 0px);
+  padding-top: 50px;
+  padding-right: 50px;
 }
 .footer-position {
   margin-top: 30px;

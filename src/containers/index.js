@@ -8,6 +8,7 @@ import Iconography from '../components/contentlist/Iconography/iconograpy.js';
 import Home from '../components/contentlist/Home/home.js';
 import Error from '../components/contentlist/Error/error.js';
 import Footer from './footer/footer.js';
+import Buttons from '../components/contentlist/Components/Buttons/buttons.js';
 
 
 
@@ -41,6 +42,7 @@ class App extends React.Component
                <Route path = "/my-app" component = {Home} exact/>
                <Route path = "/colors" component = {Color}/>
                <Route path = "/icons" component = {Iconography}/>
+               <Route path = "/components/button" component = {Buttons}/>
                <Route  component = {Error}/>
              </Switch>
              </div>

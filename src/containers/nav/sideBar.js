@@ -27,7 +27,6 @@ class DynamicSideBar extends React.Component
     super(props);
     this.state={
       open : false,
-      myListItems: []
     };
   }
 
