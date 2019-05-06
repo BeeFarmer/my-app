@@ -26,13 +26,15 @@ class MyTemplete extends React.Component
     const { value } = this.state;
 
     return (
-      <div >
+      <div>
         <Paper className="paper" elevation = {20}>
           <AppBar position="static" className="templete-appbar">
+            <div className = "tab-content">
             <Tabs value={value} onChange={this.handleChange}>
-              <Tab label={this.props.name} />
+              <Tab label={this.props.name}/>
               <Tab label="Item Two" />
             </Tabs>
+            </div>
           </AppBar>
           {value === 0 && this.props.content}
           {value === 1 && <h1> no content</h1>}

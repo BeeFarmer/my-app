@@ -142,6 +142,9 @@ iframe {
   height: 700px;
   margin-bottom: 30px;
 }
+.space {
+  flex-grow: 1;
+}
 .home {
   border: 1px solid #000;
   width: 100%;
@@ -163,10 +166,13 @@ iframe {
 }
 .paper {
   background-color: #fffff0 !important;
-  height: 70vh;
+  text-align: center !important;
 }
 .templete-appbar {
   background-color: #a52a2a !important;
+}
+.tab-content {
+  text-align: center;
 }
 .footer {
   border-top: 1px solid #e6ecf2;
