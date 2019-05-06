@@ -35,18 +35,20 @@ class App extends React.Component
          </div>
 
          <div className = {this.state.open ? "move-right" : "default"}>
-
+             <div className = "content">
              <Switch>
-               <Route path = "/" component = {Home} exact/>
+               <Route path = "/" component = {Home}  exact/>
                <Route path = "/my-app" component = {Home} exact/>
                <Route path = "/colors" component = {Color}/>
                <Route path = "/icons" component = {Iconography}/>
                <Route  component = {Error}/>
              </Switch>
+             </div>
 
-         </div>
-         <div>
-           <Footer />
+             <div className = "footer-position">
+               <Footer />
+             </div>
+
          </div>
       </div>
       </BrowserRouter>

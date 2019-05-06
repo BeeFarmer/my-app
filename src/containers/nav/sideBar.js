@@ -57,7 +57,7 @@ class DynamicSideBar extends React.Component
       // this.setState({
       //   [node.label] : false
       // })
-      console.log(listItems);
+      // console.log(listItems);
       return(
         <div>
           <ListItem button onClick={()=>{this.openSubList(node.label)}} key = {node.label}>
@@ -71,7 +71,7 @@ class DynamicSideBar extends React.Component
 
           <Collapse in={this.state[node.label]} timeout="auto" unmountOnExit>
           <List component="div">
-            {listItems}
+           {listItems}
           </List>
           </Collapse>
 
@@ -119,6 +119,9 @@ class DynamicSideBar extends React.Component
       }
     return listItems;
   }
+
+
+
 
 
   render()

@@ -52,7 +52,7 @@ class Header extends React.Component
       <div className = "root">
         <AppBar>
 
-          <Toolbar>
+          <Toolbar className = "toolbar">
             <div>
             <ListItem button onClick={()=>{this.props.SideBarOpen()}} >
               <ListItemIcon>
