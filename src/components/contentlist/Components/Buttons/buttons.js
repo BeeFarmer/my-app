@@ -24,10 +24,11 @@ class Buttons extends React.Component
     {
       output.push(this.renderButton());
     }
+    let el = (<div> <h1>default</h1> <br/>{output}</div>)
     let myName = "Button"
     return(
       <div>
-      <MyTemplete content = {output} name = {myName}/>
+      <MyTemplete content = {el} name = {myName}/>
       </div>
     )
   }
