@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import Paper from '@material-ui/core/Paper';
+
 class Home extends React.Component
 {
   constructor(props)
@@ -8,7 +10,7 @@ class Home extends React.Component
   }
   render() {
     return (
-      <div className = "home">
+      <Paper className = "home" elevation = {20} square={true}>
         <div>
         <h1 className = "title">Welcome</h1>
         </div>
@@ -20,7 +22,7 @@ class Home extends React.Component
           <br/>
           <h1>React (also known as React.js or ReactJS) is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies</h1>
         </div>
-      </div>
+      </Paper>
     )
   }
 }

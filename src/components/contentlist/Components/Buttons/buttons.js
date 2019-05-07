@@ -1,48 +1,83 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import MyTemplete  from '../../../templete';
-
-
-const styles = theme => ({
-  button: {
-    marginRight: theme.spacing.unit*20,
-  },
-  input: {
-    display: 'none',
-  },
-});
 
 class Buttons extends React.Component
 {
   renderButton()
   {
-    const {classes} = this.props;
     return(
-      <Button variant="contained" className={classes.button}>
-        Default
-      </Button>
-    )
+      <div>
+            <h3>Default</h3>
+            <div className="buttons">
+                <Button>Default</Button>
+                <Button color="primary">
+                    Primary
+                </Button>
+                <Button color="secondary">
+                    Secondary
+                </Button>
+                <Button disabled>
+                    Disabled
+                </Button>
+            </div>
+            <h3>Outlined</h3>
+            <div className="buttons">
+                <Button variant="outlined">Default</Button>
+                <Button variant="outlined" color="primary">
+                    Primary
+                </Button>
+                <Button variant="outlined" color="secondary">
+                    Secondary
+                </Button>
+                <Button variant="outlined" disabled>
+                    Disabled
+                </Button>
+            </div>
+            <h3>Contained</h3>
+            <div className="buttons">
+                <Button variant="contained">Default</Button>
+                <Button variant="contained" color="primary">
+                    Primary
+                </Button>
+                <Button variant="contained" color="secondary">
+                    Secondary
+                </Button>
+                <Button variant="contained" disabled>
+                    Disabled
+                </Button>
+            </div>
+            <h3>Size</h3>
+            <div className="buttons">
+                <Button size="small" variant="contained">
+                    Small
+                </Button>
+                <Button size="medium" variant="contained" color="secondary">
+                    Medium
+                </Button>
+                <Button size="medium" variant="contained" disabled>
+                    Disabled
+                </Button>
+                <Button size="large" variant="contained" color="primary">
+                    Large
+                </Button>
+            </div>
+        </div>
+    );
   }
 
   render()
   {
-    const {classes} = this.props;
-    let output = [];
-    for(let i = 0; i < 4; i++)
-    {
-      output.push(this.renderButton());
-    }
-    let el = (<div > <h1>default</h1> <br/>{output}</div>)
-    let myName = "Button"
+
+    let output = this.renderButton();
+    let myName = "Button";
     return(
       <div>
-      <MyTemplete content = {el} name = {myName}/>
+      <MyTemplete content = {output} name = {myName}/>
       </div>
     );
   }
 
 }
 
-export default withStyles(styles)(Buttons);
+export default Buttons;

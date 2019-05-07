@@ -4,7 +4,7 @@ import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
 import "../../node_modules/react-vis/dist/style.css";
 import Header  from './header';
 import Color from '../components/contentlist/Colors/colors.js';
-import Iconography from '../components/contentlist/Iconography/iconograpy.js';
+import MyIconography from '../components/contentlist/Iconography/iconograpy.js';
 import Home from '../components/contentlist/Home/home.js';
 import Error from '../components/contentlist/Error/error.js';
 import Footer from './footer/footer.js';
@@ -22,7 +22,7 @@ import MyStackedBar from '../components/contentlist/Charts/StackedBar/stackedBar
 import MyArea from '../components/contentlist/Charts/Area/area.js';
 import MyPie from '../components/contentlist/Charts/Pie/pie.js';
 import MyScatterplot from '../components/contentlist/Charts/Scatterplot/scatterplot.js';
-
+import MyAvatar from '../components/contentlist/Components/Avatar/avatar.js';
 
 class App extends React.Component
 {
@@ -53,7 +53,7 @@ class App extends React.Component
                <Route path = "/" component = {Home}  exact/>
                <Route path = "/my-app" component = {Home} exact/>
                <Route path = "/colors" component = {Color}/>
-               <Route path = "/icons" component = {Iconography}/>
+               <Route path = "/icons" component = {MyIconography}/>
                <Route path = "/components/button" component = {Buttons}/>
                <Route path = "/components/table" component = {Tables}/>
                <Route path = "/components/tabs" component = {MyTabs}/>
@@ -62,6 +62,7 @@ class App extends React.Component
                <Route path = "/components/messagebar" component = {MyMessageBar}/>
                <Route path = "/components/dialog" component = {MyDialog}/>
                <Route path = "/components/notification" component = {MyNotification}/>
+               <Route path = "/components/avatar" component = {MyAvatar}/>
                <Route path = "/charts/line" component = {MyLine}/>
                <Route path = "/charts/bar" component = {MyBar}/>
                <Route path = "/charts/stackbar" component = {MyStackedBar}/>
