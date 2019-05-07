@@ -117,7 +117,7 @@ class MyNotification extends React.Component {
     return(
       <div>
       <Button className={classes.margin} onClick={this.handleClick}>
-        Open success snackbar
+        Status Updated
       </Button>
       <Snackbar
         anchorOrigin={{
@@ -131,7 +131,7 @@ class MyNotification extends React.Component {
         <MySnackbarContentWrapper
           onClose={this.handleClose}
           variant="success"
-          message="This is a success message!"
+          message="Your submission has been received!"
         />
       </Snackbar>
 

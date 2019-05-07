@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
+import "../../node_modules/react-vis/dist/style.css";
 import Header  from './header';
-import SideBar  from './nav';
 import Color from '../components/contentlist/Colors/colors.js';
 import Iconography from '../components/contentlist/Iconography/iconograpy.js';
 import Home from '../components/contentlist/Home/home.js';
@@ -16,6 +16,12 @@ import MyProgress from '../components/contentlist/Components/Progress/progress.j
 import MyMessageBar from '../components/contentlist/Components/MessageBar/messageBar.js';
 import MyDialog from '../components/contentlist/Components/Dialog/dialog.js';
 import MyNotification from '../components/contentlist/Components/Notification/notification.js';
+import MyLine from '../components/contentlist/Charts/Line/line.js';
+import MyBar from '../components/contentlist/Charts/Bar/bar.js';
+import MyStackedBar from '../components/contentlist/Charts/StackedBar/stackedBar.js';
+import MyArea from '../components/contentlist/Charts/Area/area.js';
+import MyPie from '../components/contentlist/Charts/Pie/pie.js';
+import MyScatterplot from '../components/contentlist/Charts/Scatterplot/scatterplot.js';
 
 
 class App extends React.Component
@@ -56,6 +62,12 @@ class App extends React.Component
                <Route path = "/components/messagebar" component = {MyMessageBar}/>
                <Route path = "/components/dialog" component = {MyDialog}/>
                <Route path = "/components/notification" component = {MyNotification}/>
+               <Route path = "/charts/line" component = {MyLine}/>
+               <Route path = "/charts/bar" component = {MyBar}/>
+               <Route path = "/charts/stackbar" component = {MyStackedBar}/>
+               <Route path = "/charts/area" component = {MyArea}/>
+               <Route path = "/charts/pie" component = {MyPie}/>
+               <Route path = "/charts/scatterplot" component = {MyScatterplot}/>
                <Route  component = {Error}/>
              </Switch>
              </div>

@@ -7,7 +7,7 @@ import MyTemplete  from '../../../templete';
 
 const styles = theme => ({
   button: {
-    margin: theme.spacing.unit,
+    marginRight: theme.spacing.unit*20,
   },
   input: {
     display: 'none',
