@@ -181,6 +181,7 @@ iframe {
 }
 .icon-paper {
   background-color: #fffff0 !important;
+  text-align: center !important;
 }
 .icons-display {
   flex-flow: wrap;
@@ -189,6 +190,8 @@ iframe {
 .one-icon-display {
   padding: 30px;
   display: flex;
+  cursor: pointer;
+  margin: 30px;
 }
 .paper {
   background-color: #fffff0 !important;
