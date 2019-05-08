@@ -161,7 +161,8 @@ iframe {
   justify-content: space-around;
   align-items: center;
   height: 60px;
-  border: 1px solid #f00;
+  border-top: 1px solid #a52a2a;
+  border-bottom: 1px solid #a52a2a;
 }
 .home {
   background-color: #fffff0 !important;
@@ -188,7 +189,6 @@ iframe {
   display: flex;
 }
 .one-icon-display {
-  padding: 30px;
   display: flex;
   cursor: pointer;
   margin: 30px;

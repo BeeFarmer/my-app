@@ -1,13 +1,17 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import MyTemplete  from '../../../templete';
+import CodeBlock from '../../../';
+import ReactMarkdown from 'react-markdown';
 
 class Buttons extends React.Component
 {
+
   renderButton()
   {
     return(
       <div>
+            <br/>
             <h3>Default</h3>
             <div className="buttons">
                 <Button>Default</Button>
@@ -71,9 +75,20 @@ class Buttons extends React.Component
 
     let output = this.renderButton();
     let myName = "Button";
+    let string = `
+    import Button from '@material-ui/core/Button';
+      <Button color="primary | secondary" variant="outlined | contained" size="small | medium | large">
+        Button
+      </Button>
+      <Button disabled>
+        Disabled Button
+      </Button>`;
+
+    let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
+
     return(
       <div>
-      <MyTemplete content = {output} name = {myName}/>
+      <MyTemplete content = {output} name = {myName} sampleUsage = {code}/>
       </div>
     );
   }

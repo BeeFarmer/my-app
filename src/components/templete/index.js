@@ -6,6 +6,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
+import ReactMarkdown from 'react-markdown';
+import CodeBlock from '../../'
 
 
 class MyTemplete extends React.Component
@@ -22,6 +24,8 @@ class MyTemplete extends React.Component
     this.setState({ value });
   };
 
+
+
   render() {
     const { value } = this.state;
 
@@ -32,12 +36,12 @@ class MyTemplete extends React.Component
             <div className = "tab-content">
             <Tabs value={value} onChange={this.handleChange}>
               <Tab label={this.props.name}/>
-              <Tab label="Item Two" />
+              <Tab label="Sample Usage" />
             </Tabs>
             </div>
           </AppBar>
           {value === 0 && this.props.content}
-          {value === 1 && <h1> no content</h1>}
+          {value === 1 && this.props.sampleUsage}
         </Paper>
       </div>
     );

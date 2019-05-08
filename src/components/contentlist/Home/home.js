@@ -1,5 +1,7 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
+import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 class Home extends React.Component
 {
@@ -9,6 +11,7 @@ class Home extends React.Component
     console.log(props);
   }
   render() {
+    const input = "language: PropTypes.string";
     return (
       <Paper className = "home" elevation = {20} square={true}>
         <div>
