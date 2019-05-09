@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import MyTemplete  from '../../../templete';
+import CodeBlock from '../../../';
+import ReactMarkdown from 'react-markdown';
 
 const styles = theme =>({
   root: {
     flexGrow: 1,
   },
   progress: {
-    padding: theme.spacing.unit * 10,
+    padding: theme.spacing.unit * 5,
   },
 });
 
@@ -25,10 +27,25 @@ function MyProgress(props) {
   </div>
   );
   let myName = "Progress";
+  let string = `
+
+    import LinearProgress from '@material-ui/core/LinearProgress';
+
+    function LinearIndeterminate(props) {
+    return (
+      <div>
+        <LinearProgress />
+        <br />
+        <LinearProgress color="secondary" />
+      </div>
+     );
+    }`;
+
+  let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
 
   return (
     <div>
-    <MyTemplete content = {output} name = {myName}/>
+    <MyTemplete content = {output} name = {myName} sampleUsage={code}/>
     </div>
   );
 }

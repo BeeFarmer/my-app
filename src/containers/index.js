@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
 import "../../node_modules/react-vis/dist/style.css";
 import Header  from './header';
-import Color from '../components/contentlist/Colors/colors.js';
+import MyColor from '../components/contentlist/Colors/colors.js';
 import MyIconography from '../components/contentlist/Iconography/iconograpy.js';
-import Home from '../components/contentlist/Home/home.js';
+import MyHome from '../components/contentlist/Home/home.js';
 import Error from '../components/contentlist/Error/error.js';
 import Footer from './footer/footer.js';
-import Buttons from '../components/contentlist/Components/Buttons/buttons.js';
-import Tables from '../components/contentlist/Components/Tables/tables.js';
+import MyButtons from '../components/contentlist/Components/Buttons/buttons.js';
+import MyTables from '../components/contentlist/Components/Tables/tables.js';
 import MyTabs from '../components/contentlist/Components/Tabs/tabs.js';
 import MySpinner from '../components/contentlist/Components/Spinner/spinner.js';
 import MyProgress from '../components/contentlist/Components/Progress/progress.js';
@@ -23,6 +23,8 @@ import MyArea from '../components/contentlist/Charts/Area/area.js';
 import MyPie from '../components/contentlist/Charts/Pie/pie.js';
 import MyScatterplot from '../components/contentlist/Charts/Scatterplot/scatterplot.js';
 import MyAvatar from '../components/contentlist/Components/Avatar/avatar.js';
+import MyMarkdown from '../components/contentlist/Components/Markdown/markdown.js';
+import Data from "./nav/data.js";
 
 class App extends React.Component
 {
@@ -38,6 +40,42 @@ class App extends React.Component
     this.setState({open : !this.state.open});
   };
 
+  renderOneRouter(node)
+  {
+    console.log(node);
+    if(node.subNavItems)
+    {
+      return this.renderOneRouter(node.subNavItems);
+    }
+    else
+    {
+      if(node.url = "/")
+      {
+        return(
+          <div>
+          <Route path = {node.url} component = {node.component}  exact/>
+          <Route path = "/MyApp" component = {node.component}  exact/>
+          </div>
+        );
+      }
+      else
+      {
+        return(
+          <Route path = {node.url} component = {node.component}/>
+        );
+      }
+    }
+  }
+
+  routerLoop(routers)
+  {
+    let output = [];
+    for(let i = 0; i < routers.length; i++)
+    {
+      output.push(this.renderOneRouter(routers[i]));
+    }
+    return output;
+  }
   render()
   {
     return(
@@ -50,12 +88,12 @@ class App extends React.Component
          <div className = {this.state.open ? "move-right" : "default"}>
              <div className = "content">
              <Switch>
-               <Route path = "/" component = {Home}  exact/>
-               <Route path = "/my-app" component = {Home} exact/>
-               <Route path = "/colors" component = {Color}/>
+               <Route path = "/" component = {MyHome}  exact/>
+               <Route path = "/my-app" component = {MyHome} exact/>
+               <Route path = "/colors" component = {MyColor}/>
                <Route path = "/icons" component = {MyIconography}/>
-               <Route path = "/components/button" component = {Buttons}/>
-               <Route path = "/components/table" component = {Tables}/>
+               <Route path = "/components/button" component = {MyButtons}/>
+               <Route path = "/components/table" component = {MyTables}/>
                <Route path = "/components/tabs" component = {MyTabs}/>
                <Route path = "/components/spinner" component = {MySpinner}/>
                <Route path = "/components/progress" component = {MyProgress}/>
@@ -63,6 +101,7 @@ class App extends React.Component
                <Route path = "/components/dialog" component = {MyDialog}/>
                <Route path = "/components/notification" component = {MyNotification}/>
                <Route path = "/components/avatar" component = {MyAvatar}/>
+               <Route path = "/components/markdown" component = {MyMarkdown}/>
                <Route path = "/charts/line" component = {MyLine}/>
                <Route path = "/charts/bar" component = {MyBar}/>
                <Route path = "/charts/stackbar" component = {MyStackedBar}/>
@@ -72,11 +111,9 @@ class App extends React.Component
                <Route  component = {Error}/>
              </Switch>
              </div>
-
-             <div className = "footer-position">
-               <Footer />
-             </div>
-
+         </div>
+         <div className = "footer-position">
+           <Footer />
          </div>
       </div>
       </BrowserRouter>

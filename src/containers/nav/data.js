@@ -29,11 +29,6 @@ const navItems = [
           icon: 'NavigateNext'
         },
         {
-          label: 'TreeTable',
-          url: BASE_URL + 'components/treeTable',
-          icon: 'NavigateNext'
-        },
-        {
           label: 'Tabs',
           url: BASE_URL + 'components/tabs',
           icon: 'NavigateNext'

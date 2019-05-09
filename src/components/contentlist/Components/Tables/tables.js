@@ -8,6 +8,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import MyTemplete  from '../../../templete';
+import CodeBlock from '../../../';
+import ReactMarkdown from 'react-markdown';
 
 const CustomTableCell = withStyles(theme => ({
   head: {
@@ -50,7 +52,7 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-function Tables(props) {
+function MyTables(props) {
   const { classes } = props;
   let myName = "Table";
   let output = (<Paper className={classes.root}>
@@ -80,16 +82,30 @@ function Tables(props) {
       </Table>
     </Paper>);
 
+    let string = `
+    import Table from '@material-ui/core/Table';
+      <Table>
+        <TableHead>
+          <TableRow>
+          </TableRow>
+        </TableHead>
+       <TableBody>
+         {inputData}
+       </TableBody>
+     </Table>`;
+
+    let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
+
     return(
       <div>
-      <MyTemplete content = {output} name = {myName}/>
+      <MyTemplete content = {output} name = {myName} sampleUsage = {code}/>
       </div>
-    )
+    );
 
 }
 
-Tables.propTypes = {
+MyTables.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Tables);
+export default withStyles(styles)(MyTables);

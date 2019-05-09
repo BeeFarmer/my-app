@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import MyTemplete  from '../../../templete';
+import CodeBlock from '../../../';
+import ReactMarkdown from 'react-markdown';
 
 const styles = theme => ({
   progress: {
@@ -23,9 +25,25 @@ function MySpinner(props) {
 );
   let myName = "Spinner";
 
+  let string = `
+
+    import CircularProgress from '@material-ui/core/LinearProgress';
+
+    function Circular(props) {
+    return (
+      <div>
+        <CircularProgress/>
+        <br />
+        <CircularProgress color="secondary" />
+      </div>
+     );
+    }`;
+
+  let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
+
   return (
     <div>
-    <MyTemplete content = {output} name = {myName}/>
+    <MyTemplete content = {output} name = {myName} sampleUsage = {code}/>
     </div>
   );
 }

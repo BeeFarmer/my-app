@@ -4,7 +4,7 @@ import MyTemplete  from '../../../templete';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 
-class Buttons extends React.Component
+class MyButtons extends React.Component
 {
 
   renderButton()
@@ -95,4 +95,4 @@ class Buttons extends React.Component
 
 }
 
-export default Buttons;
+export default MyButtons;

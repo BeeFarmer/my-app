@@ -43,8 +43,7 @@ class DynamicSideBar extends React.Component
   openSubList(oneState){
     this.setState({
       [oneState]: !this.state[oneState]
-    },()=>{console.log(this.state)})
-    console.log(oneState)
+    });
   }
 
   renderNavItem(node)
@@ -53,10 +52,6 @@ class DynamicSideBar extends React.Component
     if(node.subNavItems)
     {
       let listItems = this.loopSubItems(node.subNavItems)
-      // this.setState({
-      //   [node.label] : false
-      // })
-      // console.log(listItems);
       return(
         <div>
           <ListItem button onClick={()=>{this.openSubList(node.label)}} key = {node.label}>

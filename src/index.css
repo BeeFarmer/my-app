@@ -137,6 +137,33 @@ iframe {
 #root.no-margin-left {
   margin-left: 0;
 }
+.area-display {
+  justify-content: center;
+  display: flex;
+}
+.bar-display {
+  justify-content: center;
+  display: flex;
+}
+.line-display {
+  justify-content: center;
+  display: flex;
+}
+.pie-display {
+  justify-content: center;
+  display: flex;
+}
+.scatterplot-display {
+  display: flex;
+  justify-content: center;
+}
+.stack-display {
+  justify-content: center;
+  display: flex;
+}
+.iframe-display {
+  overflow: auto;
+}
 .iframe {
   width: 1200px;
   height: 700px;
@@ -147,12 +174,13 @@ iframe {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
 }
 .section {
+  width: 70%;
+}
+.avatar-display {
   display: flex;
   justify-content: space-around;
-  width: 1000px;
 }
 .buttons {
   width: 100%;
@@ -167,6 +195,7 @@ iframe {
 .home {
   background-color: #fffff0 !important;
   border-radius: 25px;
+  overflow: auto;
 }
 .title {
   text-align: left;
@@ -188,17 +217,28 @@ iframe {
   flex-flow: wrap;
   display: flex;
 }
+.icon-title {
+  color: #17324d;
+  font-weight: 900;
+  padding-top: 30px;
+}
 .one-icon-display {
   display: flex;
   cursor: pointer;
   margin: 30px;
 }
+.one-icon-display svg {
+  width: 40px;
+  height: 40px;
+}
 .paper {
   background-color: #fffff0 !important;
   text-align: center !important;
+  overflow: auto;
 }
 .templete-appbar {
   background-color: #a52a2a !important;
+  overflow: auto;
 }
 .tab-content {
   text-align: center;
@@ -206,9 +246,10 @@ iframe {
 .footer {
   border-top: 1px solid #e6ecf2;
   text-align: left;
+  margin-left: 260px;
 }
 .footer-text {
-  font-size: 15px;
+  font-size: 20px;
   color: #7d98b3;
 }
 .root {
@@ -244,9 +285,9 @@ iframe {
   width: 100vw;
 }
 .content {
-  min-height: calc(100vh - 0px);
+  min-height: calc(100vh - 30px);
   padding-top: 50px;
-  padding-right: 50px;
+  padding-right: 20px;
 }
 .footer-position {
   margin-top: 30px;

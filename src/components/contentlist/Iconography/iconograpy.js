@@ -54,12 +54,12 @@ class MyIconography extends React.Component
     `;
     let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
     return(
-      <Dialog open={!!selected} onClose={this.handleClose} aria-labelledby="alert-dialog-title" aria-describedby="alert-dialog-description">
+      <Dialog open={!!selected} onClose={this.handleClose}>
         <DialogTitle id="alert-dialog-title">
           {selected}
           {" Icon "}
           <SingleIcon/>
-          {"  Usage"}
+          {" Sample  Usage"}
         </DialogTitle>
         <DialogContent>
           {code}
@@ -82,7 +82,7 @@ class MyIconography extends React.Component
     return(
       <div >
         <Paper className = "icon-paper" elevation = {20}>
-          <h1>Click on icon to check sample usage</h1>
+          <h1 className = "icon-title">Click on Icons to Check Sample Usage</h1>
           <ul className = "icons-display">{output}</ul>
           {this.renderDialog()}
         </Paper>

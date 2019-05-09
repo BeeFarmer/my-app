@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
-class Home extends React.Component
+class MyHome extends React.Component
 {
   constructor(props)
   {
@@ -29,4 +29,4 @@ class Home extends React.Component
     )
   }
 }
-export default Home
+export default MyHome

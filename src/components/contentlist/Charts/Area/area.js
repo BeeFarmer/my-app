@@ -1,12 +1,51 @@
 import React, { Component } from 'react';
 import MyTemplete  from '../../../templete';
 import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,AreaSeries} from 'react-vis';
+import CodeBlock from '../../../';
+import ReactMarkdown from 'react-markdown';
 
 class MyArea extends Component
 {
 
   renderArea()
   {
+    const data = [
+      {x: 0, y: 15},
+      {x: 1, y: 10},
+      {x: 2, y: 9},
+      {x: 3, y: 12},
+      {x: 4, y: 10},
+      {x: 5, y: 7},
+      {x: 6, y: 8},
+      {x: 7, y: 13},
+      {x: 8, y: 10},
+      {x: 9, y: 9},
+      {x: 10, y: 14},
+      {x: 11, y: 14},
+      {x: 12, y: 11},
+      {x: 13, y: 8},
+      {x: 14, y: 15},
+      {x: 15, y: 10}
+    ];
+    return (
+      <div className = "area-display">
+        <XYPlot margin={{Bottom: 20, top: 30}} height={500} width= {500}>
+          <VerticalGridLines />
+          <HorizontalGridLines />
+          <XAxis />
+          <YAxis />
+          <AreaSeries curve="curveLinear" data={data} color="#cd3b54"/>
+        </XYPlot>
+      </div>
+    );
+  }
+  render()
+  {
+    let output = this.renderArea();
+    let myName = "Area";
+    let string = `
+    import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,AreaSeries} from 'react-vis';
+
     const data = [
       {x: 0, y: 8},
       {x: 1, y: 5},
@@ -30,14 +69,12 @@ class MyArea extends Component
         </XYPlot>
       </div>
     );
-  }
-  render()
-  {
-    let output = this.renderArea();
-    let myName = "Area";
+
+    `;
+    let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
     return(
       <div>
-      <MyTemplete content = {output} name = {myName}/>
+      <MyTemplete content = {output} name = {myName} sampleUsage = {code}/>
       </div>
     );
   }

@@ -14,6 +14,8 @@ import SnackbarContent from '@material-ui/core/SnackbarContent';
 import WarningIcon from '@material-ui/icons/Warning';
 import { withStyles } from '@material-ui/core/styles';
 import MyTemplete  from '../../../templete';
+import CodeBlock from '../../../';
+import ReactMarkdown from 'react-markdown';
 
 const variantIcon = {
   success: CheckCircleIcon,
@@ -51,6 +53,8 @@ const styles1 = theme => ({
 function MySnackbarContent(props) {
   const { classes, className, message, onClose, variant, ...other } = props;
   const Icon = variantIcon[variant];
+
+
 
   return (
     <SnackbarContent
@@ -144,9 +148,45 @@ class MyNotification extends React.Component {
 
     let output = this.renderNotification();
     let myName = "Notification";
+    let string = `
+
+    import Button from '@material-ui/core/Button';
+    import Snackbar from '@material-ui/core/Snackbar';
+
+    <div>
+        <Button onClick={this.handleClick}>Open simple snackbar</Button>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          open={this.state.open}
+          autoHideDuration={6000}
+          onClose={this.handleClose}
+          ContentProps={{
+            'aria-describedby': 'message-id',
+          }}
+          message={<span id="message-id">Note archived</span>}
+          action={[
+            <Button key="undo" color="secondary" size="small" onClick={this.handleClose}>
+              UNDO
+            </Button>,
+            <IconButton
+              key="close"
+              aria-label="Close"
+              color="inherit"
+              className={classes.close}
+              onClick={this.handleClose}
+            >
+              <CloseIcon />
+            </IconButton>,
+          ]}
+        />
+       </div>`;
+    let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
     return(
       <div>
-      <MyTemplete content = {output} name = {myName}/>
+      <MyTemplete content = {output} name = {myName} sampleUsage={code}/>
       </div>
     );
   }
