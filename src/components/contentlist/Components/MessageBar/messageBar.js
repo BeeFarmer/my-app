@@ -7,45 +7,45 @@ import MyTemplete  from '../../../templete';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 
-const action = (
-  <Button color="secondary" size="small">
-    lorem ipsum dolorem
-  </Button>
-);
-
 const styles = theme => ({
-  snackbar: {
+  snackbar1: {
     margin: theme.spacing.unit*3,
     padding: theme.spacing.unit*2,
-    flexGrow: 1
+    color: "forestgreen",
+    fontSize: 15
   },
+  snackbar2: {
+    margin: theme.spacing.unit*3,
+    padding: theme.spacing.unit*2,
+    color: "red",
+    fontSize: 15
+  }
 });
 
 function MyMessageBar(props) {
   const { classes } = props;
 
-  let output = (<div>
-    <SnackbarContent className={classes.snackbar} message="I love snacks." action={action} />
-    <SnackbarContent
-      className={classes.snackbar}
-      message={
-        'I love candy. I love cookies. I love cupcakes. \
-        I love cheesecake. I love chocolate.'
-      }
-    />
-    <SnackbarContent
-      className={classes.snackbar}
-      message="I love candy. I love cookies. I love cupcakes."
-      action={action}
-    />
-    <SnackbarContent
-      className={classes.snackbar}
-      message={
-        'I love candy. I love cookies. I love cupcakes. \
-        I love cheesecake. I love chocolate.'
-      }
-      action={action}
-    />
+  let output = (
+    <div>
+      <SnackbarContent className={classes.snackbar1} message=" Have you finished our assignment?" />
+      <SnackbarContent
+        className={classes.snackbar2}
+        message={
+          'Still working on it. \
+          And  you?'
+        }
+      />
+      <SnackbarContent
+        className={classes.snackbar1}
+        message="I have not either. Can professor accept late submission?"
+      />
+      <SnackbarContent
+        className={classes.snackbar2}
+        message={
+          'No. \
+          But there is one week remaining, do not be upset.'
+        }
+      />
   </div>
   );
 
@@ -59,9 +59,9 @@ function MyMessageBar(props) {
 
       return (
         <div>
-          <SnackbarContent message="I love snacks."  />
-            <SnackbarContent message={content 1}/>
-            <SnackbarContent message="content 2"/>
+          <SnackbarContent message="hello"  />
+            <SnackbarContent message={your content}/>
+            <SnackbarContent message="hi"/>
         </div>
       );
      }`;

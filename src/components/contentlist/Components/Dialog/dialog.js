@@ -25,9 +25,9 @@ class MyDialog extends React.Component {
   renderNotification()
   {
     return (
-      <div>
+      <div className = "dialog-button">
         <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
-          You Have New Message
+          Your New Cash Back Offer is Ready
         </Button>
         <Dialog
           open={this.state.open}
@@ -35,10 +35,10 @@ class MyDialog extends React.Component {
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">{"Wow!!!"}</DialogTitle>
+          <DialogTitle id="alert-dialog-title">{"Anniversary Sale is Coming"}</DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
-              100+ people nearby are interested in your profile.
+              Get up <b>25% off</b> sale items + Celebrate with an INCREASED <b>15% </b> cash back (was 2%).
             </DialogContentText>
           </DialogContent>
           <DialogActions>
@@ -46,7 +46,7 @@ class MyDialog extends React.Component {
               Later
             </Button>
             <Button onClick={this.handleClose} color="primary" autoFocus>
-              Check Now
+              Shop Now
             </Button>
           </DialogActions>
         </Dialog>

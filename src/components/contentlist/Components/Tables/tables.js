@@ -18,6 +18,7 @@ const CustomTableCell = withStyles(theme => ({
   },
   body: {
     fontSize: 14,
+    color: theme.palette.primary.light
   },
 }))(TableCell);
 
@@ -33,7 +34,7 @@ const styles = theme => ({
   },
   row: {
     '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.background.default,
+      backgroundColor: theme.palette.background.paper,
     },
   },
 });
@@ -45,25 +46,26 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData('United States(USA)', 46, 37, 38, 121),
+  createData(' Great Britain (GBR)', 27, 23, 17, 67),
+  createData('China (CHN)', 26, 18, 26, 70),
+  createData('Russia (RUS)', 19, 17, 20, 56),
+  createData('Germany (GER)', 17, 10, 15, 42),
 ];
 
 function MyTables(props) {
   const { classes } = props;
   let myName = "Table";
   let output = (<Paper className={classes.root}>
+      <h1 className = "table-title"><b>2016 Summer Olympics Medal Table (ranked by gold metals)</b></h1>
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <CustomTableCell>Dessert (100g serving)</CustomTableCell>
-            <CustomTableCell align="right">Calories</CustomTableCell>
-            <CustomTableCell align="right">Fat (g)</CustomTableCell>
-            <CustomTableCell align="right">Carbs (g)</CustomTableCell>
-            <CustomTableCell align="right">Protein (g)</CustomTableCell>
+            <CustomTableCell>Nations or Regions</CustomTableCell>
+            <CustomTableCell align="right">Gold</CustomTableCell>
+            <CustomTableCell align="right">Silver</CustomTableCell>
+            <CustomTableCell align="right">Bronze</CustomTableCell>
+            <CustomTableCell align="right">Total</CustomTableCell>
           </TableRow>
         </TableHead>
         <TableBody>

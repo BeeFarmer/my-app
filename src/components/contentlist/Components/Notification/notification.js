@@ -120,24 +120,26 @@ class MyNotification extends React.Component {
     const { classes } = this.props;
     return(
       <div>
-      <Button className={classes.margin} onClick={this.handleClick}>
-        Status Updated
-      </Button>
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'center',
-        }}
-        open={this.state.open}
-        autoHideDuration={6000}
-        onClose={this.handleClose}
-      >
-        <MySnackbarContentWrapper
+        <div className="button-style">
+        <Button onClick={this.handleClick}>
+          View Your Reservation Status
+        </Button>
+        </div>
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={this.state.open}
+          autoHideDuration={6000}
           onClose={this.handleClose}
-          variant="success"
-          message="Your submission has been received!"
-        />
-      </Snackbar>
+        >
+          <MySnackbarContentWrapper
+            onClose={this.handleClose}
+            variant="success"
+            message="Enjoy! Your reservation is completed"
+          />
+        </Snackbar>
 
     </div>
 
@@ -154,28 +156,20 @@ class MyNotification extends React.Component {
     import Snackbar from '@material-ui/core/Snackbar';
 
     <div>
-        <Button onClick={this.handleClick}>Open simple snackbar</Button>
+        <Button onClick={this.handleClick}>Button</Button>
         <Snackbar
           anchorOrigin={{
             vertical: 'bottom',
             horizontal: 'left',
           }}
           open={this.state.open}
-          autoHideDuration={6000}
           onClose={this.handleClose}
-          ContentProps={{
-            'aria-describedby': 'message-id',
-          }}
-          message={<span id="message-id">Note archived</span>}
+          message={<span>Note archived</span>}
           action={[
-            <Button key="undo" color="secondary" size="small" onClick={this.handleClose}>
+            <Button onClick={this.handleClose}>
               UNDO
             </Button>,
             <IconButton
-              key="close"
-              aria-label="Close"
-              color="inherit"
-              className={classes.close}
               onClick={this.handleClose}
             >
               <CloseIcon />

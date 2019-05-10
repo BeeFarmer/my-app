@@ -15,7 +15,7 @@ class MyArea extends Component
       {x: 2, y: 9},
       {x: 3, y: 12},
       {x: 4, y: 10},
-      {x: 5, y: 7},
+      {x: 5, y: 4},
       {x: 6, y: 8},
       {x: 7, y: 13},
       {x: 8, y: 10},
@@ -29,7 +29,7 @@ class MyArea extends Component
     ];
     return (
       <div className = "area-display">
-        <XYPlot margin={{Bottom: 20, top: 30}} height={500} width= {500}>
+        <XYPlot margin={{Bottom: 20, top: 30}} height={700} width= {700} yDomain={[0, 17]}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis />

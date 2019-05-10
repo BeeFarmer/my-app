@@ -29,7 +29,7 @@ class MyLine extends Component
     ];
     return (
       <div className = "line-display">
-        <XYPlot margin={{Bottom: 20, top: 30}} height={500} width= {500}>
+        <XYPlot margin={{Bottom: 20, top: 30}} height={700} width= {700}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis />

@@ -192,6 +192,32 @@ iframe {
   border-top: 1px solid #a52a2a;
   border-bottom: 1px solid #a52a2a;
 }
+.dialog-button {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.display-left {
+  text-align: right;
+}
+.button-style {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.button-style button {
+  border: 1px solid rgba(63,81,181,0.5);
+}
+.table-title {
+  padding-bottom: 20px;
+  color: #17324d false;
+}
+.tab-title {
+  padding-bottom: 20px;
+  color: #17324d false;
+}
+.tab-content {
+  font-size: 20px;
+  text-align: left;
+}
 .home {
   background-color: #fffff0 !important;
   border-radius: 25px;
@@ -256,8 +282,14 @@ iframe {
   flex-grow: 1;
   margin-bottom: 0px;
 }
-.toolbar {
-  background-color: #a52a2a;
+.root header {
+  padding-right: 0px;
+}
+.appbar {
+  background-color: #a52a2a !important;
+}
+.appbar .toolbar {
+  background-color: inherit;
 }
 .grow {
   flex-grow: 1;

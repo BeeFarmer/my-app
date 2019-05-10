@@ -36,7 +36,7 @@ class MyTemplete extends React.Component
             <div className = "tab-content">
             <Tabs value={value} onChange={this.handleChange}>
               <Tab label={this.props.name}/>
-              <Tab label="Sample Usage" />
+              <Tab label="Usage" />
             </Tabs>
             </div>
           </AppBar>

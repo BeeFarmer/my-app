@@ -53,7 +53,7 @@ class MyMarkdown extends React.Component
 
       return(
         {code}
-      ) `;
+      ); `;
 
       let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);
       return(
