@@ -3,7 +3,7 @@ class Error extends React.Component {
   render() {
     return (
       <div>
-        <h1>404 page does not exist</h1>
+        <h1>Error 404!</h1>
       </div>
     )
   }

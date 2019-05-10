@@ -20,7 +20,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import List from '@material-ui/core/List';
-import SideBar  from '../nav';
 import DynamicSideBar from '../nav/sideBar.js'
 import Collapse from '@material-ui/core/Collapse';
 import { NavLink } from 'react-router-dom';

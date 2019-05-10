@@ -92,7 +92,7 @@ class DynamicSideBar extends React.Component
   listLoop(list)
   {
     let output = [];
-    for(let i = 0; i < list.length; i++)
+    for(let i in list)
     {
       output.push(this.renderNavItem(list[i]));
     }
@@ -107,7 +107,7 @@ class DynamicSideBar extends React.Component
   loopSubItems(list)
   {
     let listItems = []
-      for(let i = 0; i < list.length; i++)
+    for(let i in list)
       {
         listItems.push(this.renderNavItem(list[i]));
       }
