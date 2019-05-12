@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
+import { Route, Link, BrowserRouter, Switch, HashRouter } from 'react-router-dom';
 import "../../node_modules/react-vis/dist/style.css";
 import Header  from './header';
 import MyColor from '../components/contentlist/Colors/colors.js';
@@ -79,7 +79,7 @@ class App extends React.Component
   render()
   {
     return(
-       <BrowserRouter>
+       <HashRouter basename='/'>
       <div className= 'App' >
          <div>
          <Header SideBarOpen={this.handleNavOpen} listOpenState = {this.state.open}/>
@@ -116,7 +116,7 @@ class App extends React.Component
            <Footer />
          </div>
       </div>
-      </BrowserRouter>
+      </HashRouter>
 
     );
   }
