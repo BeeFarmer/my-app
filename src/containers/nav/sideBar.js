@@ -82,7 +82,6 @@ class DynamicSideBar extends React.Component
     {
       output.push(this.renderNavItem(list[i]));
     }
-    //this.setState({myListItems : output});
     return(
       <div>
       {output}
@@ -124,4 +123,5 @@ const mapDispatchtoProps = (dispatch) =>{
     showSublist: (oneState) => {dispatch({type: 'Show_Sublist', oneState: oneState})},
   }
 }
+
 export default connect(mapStateToProps,mapDispatchtoProps)(DynamicSideBar);

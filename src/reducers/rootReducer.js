@@ -2,8 +2,8 @@ import Data from "../containers/nav/data.js";
 
 const initState =  {
   anchorEl : null, //control right menu
-  leftOpen : false,
-  data : Data.navItems
+  leftOpen : false, //control left menu
+  data : Data.navItems //left menu table of contents data
 }
 
 const rootReducer = (state = initState, action) =>{
