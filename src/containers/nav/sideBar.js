@@ -19,21 +19,17 @@ import MenuList from '@material-ui/core/MenuList';
 import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
 import Data from "./data.js";
 import * as Icons from '@material-ui/icons';
+import {connect} from 'react-redux';
 
 class DynamicSideBar extends React.Component
 {
   constructor(props)
   {
     super(props);
-    this.state={
-      open : false,
-    };
   }
 
   openSubList(oneState){
-    this.setState({
-      [oneState]: !this.state[oneState]
-    });
+    this.props.showSublist(oneState);
   }
 
   renderNavItem(node)
@@ -49,11 +45,11 @@ class DynamicSideBar extends React.Component
               <MyIcon />
             </ListItemIcon>
             <ListItemText inset primary={node.label} />
-            {this.state[node.label]?<Icons.ExpandLess/> : <Icons.ExpandMore/>}
+            {this.props.state[node.label]?<Icons.ExpandLess/> : <Icons.ExpandMore/>}
+            {console.log(this.props.state[node.label])}
           </ListItem>
           <Divider />
-
-          <Collapse in={this.state[node.label]} timeout="auto" unmountOnExit>
+          <Collapse in={this.props.state[node.label]} timeout="auto" unmountOnExit>
           <List component="div">
            {listItems}
           </List>
@@ -105,14 +101,27 @@ class DynamicSideBar extends React.Component
   }
   render()
   {
+    const { data } = this.props;
     return(
       <div>
 
-        {this.listLoop(Data.navItems)}
+        {this.listLoop(data)}
 
       </div>
     );
   }
 }
 
-export default DynamicSideBar;
+const mapStateToProps = (state) =>{
+  return{
+    data: state.data,
+    state: state
+  }
+}
+
+const mapDispatchtoProps = (dispatch) =>{
+  return{
+    showSublist: (oneState) => {dispatch({type: 'Show_Sublist', oneState: oneState})},
+  }
+}
+export default connect(mapStateToProps,mapDispatchtoProps)(DynamicSideBar);

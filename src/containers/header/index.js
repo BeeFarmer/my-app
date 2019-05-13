@@ -44,7 +44,7 @@ class Header extends React.Component
   render()
   {
 
-    const { anchorEl} = this.props;
+    const { anchorEl } = this.props;
     return (
       <div className = "root">
         <AppBar className="appbar">

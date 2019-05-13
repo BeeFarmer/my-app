@@ -1,0 +1,4 @@
+return{
+  ...state,
+  [action.oneState]: !state[action.oneState]
+}
