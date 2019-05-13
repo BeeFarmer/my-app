@@ -30,16 +30,6 @@ class DynamicSideBar extends React.Component
     };
   }
 
-   // componentWillMount = () =>{
-   //    this.listLoop(Data.navItems);
-   // }
-
-  showSubList = () =>{
-    this.setState({open : !this.state.open});
-    console.log(this.state.open);
-  }
-
-
   openSubList(oneState){
     this.setState({
       [oneState]: !this.state[oneState]
@@ -113,15 +103,8 @@ class DynamicSideBar extends React.Component
       }
     return listItems;
   }
-
-
-
-
-
   render()
   {
-    // const myList = Data.navItems.map((node) =>{
-    //  this.renderNavItem(node)})
     return(
       <div>
 

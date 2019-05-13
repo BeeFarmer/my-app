@@ -25,19 +25,18 @@ import MyScatterplot from '../components/contentlist/Charts/Scatterplot/scatterp
 import MyAvatar from '../components/contentlist/Components/Avatar/avatar.js';
 import MyMarkdown from '../components/contentlist/Components/Markdown/markdown.js';
 import Data from "./nav/data.js";
+import {connect} from 'react-redux';
 
 class App extends React.Component
 {
   constructor(props)
   {
     super(props);
-    this.state = {
-      open : false
-    };
+
   }
 
   handleNavOpen = () =>{
-    this.setState({open : !this.state.open});
+    this.props.leftMenuOpen();
   };
 
   renderOneRouter(node)
@@ -82,10 +81,10 @@ class App extends React.Component
        <HashRouter basename='/'>
       <div className= 'App' >
          <div>
-         <Header SideBarOpen={this.handleNavOpen} listOpenState = {this.state.open}/>
+         <Header SideBarOpen={this.handleNavOpen} listOpenState = {this.props.leftOpen}/>
          </div>
 
-         <div className = {this.state.open ? "move-right" : "default"}>
+         <div className = {this.props.leftOpen ? "move-right" : "default"}>
              <div className = "content">
              <Switch>
                <Route path = "/" component = {MyHome}  exact/>
@@ -121,5 +120,16 @@ class App extends React.Component
     );
   }
 }
+const mapStateToProps = (state) =>{
+  return{
+    leftOpen: state.leftOpen
+  }
+}
 
-export default App;
+const mapDispatchtoProps = (dispatch) =>{
+  return{
+    leftMenuOpen: () => {dispatch({type: 'Show_Left_Menu'})}
+  }
+}
+
+export default connect(mapStateToProps,mapDispatchtoProps)(App);

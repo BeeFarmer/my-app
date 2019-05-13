@@ -23,6 +23,7 @@ import List from '@material-ui/core/List';
 import DynamicSideBar from '../nav/sideBar.js'
 import Collapse from '@material-ui/core/Collapse';
 import { NavLink } from 'react-router-dom';
+import {connect} from 'react-redux';
 
 class Header extends React.Component
 {
@@ -30,24 +31,20 @@ class Header extends React.Component
   constructor(props)
   {
     super(props);
-    this.state =
-    {
-      anchorEl: null,
-    }
   }
 
-  handleClick = event => {
-    this.setState({ anchorEl: event.currentTarget });
+  handleClick = (event) => {
+    this.props.showRightMenu(event);
   };
 
   handleClose = () => {
-    this.setState({ anchorEl: null });
+    this.props.closeRightMenu();
   };
 
   render()
   {
 
-    const { anchorEl} = this.state;
+    const { anchorEl} = this.props;
     return (
       <div className = "root">
         <AppBar className="appbar">
@@ -100,6 +97,19 @@ class Header extends React.Component
   }
 }
 
+const mapStateToProps = (state) =>{
+  return{
+    anchorEl: state.anchorEl
+  }
+}
+
+const mapDispatchtoProps = (dispatch) =>{
+  return{
+    showRightMenu: (event) => {dispatch({type: 'Show_Right_Menu', event: event})},
+    closeRightMenu: () => {dispatch({type: 'Close_Right_Menu'})}
+  }
+}
 
 
-export default Header;
+
+export default connect(mapStateToProps,mapDispatchtoProps)(Header);
