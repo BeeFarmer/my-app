@@ -161,6 +161,10 @@ iframe {
   justify-content: center;
   display: flex;
 }
+.bar-display {
+  justify-content: center;
+  display: flex;
+}
 .iframe-display {
   overflow: auto;
 }
@@ -175,8 +179,18 @@ iframe {
   justify-content: space-around;
   align-items: center;
 }
+.row1 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  color: #17324d false;
+}
+.row {
+  padding-bottom: 10px;
+  color: #17324d false;
+}
 .section {
   width: 70%;
+  margin-bottom: 30px;
 }
 .avatar-display {
   display: flex;
@@ -205,6 +219,10 @@ iframe {
 }
 .button-style button {
   border: 1px solid rgba(63,81,181,0.5);
+}
+.panel-title {
+  padding-bottom: 20px;
+  color: #17324d false;
 }
 .table-title {
   padding-bottom: 20px;
@@ -290,6 +308,9 @@ iframe {
 }
 .appbar .toolbar {
   background-color: inherit;
+}
+.appbar .home-icon {
+  margin-right: 8px;
 }
 .grow {
   flex-grow: 1;

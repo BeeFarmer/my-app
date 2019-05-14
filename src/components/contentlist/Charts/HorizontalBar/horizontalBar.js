@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import MyTemplete  from '../../../templete';
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,HorizontalBarSeries,VerticalBarSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,HorizontalBarSeries} from 'react-vis';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
-class MyBar extends Component
+class MyHorizontalBar extends Component
 {
 
   renderBar()
@@ -26,7 +26,7 @@ class MyBar extends Component
 
     return (
       <div className = "bar-display">
-        <XYPlot margin={{left: 70, top: 20}} yType="ordinal" width={700} height={700} xDomain={[0, 23]}>
+        <XYPlot margin={{left: 70, top: 20}} yType="ordinal" width={700} height={700} xDomain={[0, 26]}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis  />
@@ -46,7 +46,7 @@ class MyBar extends Component
     let output = this.renderBar();
     let myName = "Bar";
     let string = `
-    import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,HorizontalBarSeries,VerticalBarSeries} from 'react-vis';
+    import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,HorizontalBarSeries} from 'react-vis';
 
     const data1 = [
       {x: 20, y: 'Apple'},
@@ -84,4 +84,4 @@ class MyBar extends Component
   }
 }
 
-export default MyBar;
+export default MyHorizontalBar;

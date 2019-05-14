@@ -36,7 +36,7 @@ class MyIconography extends React.Component
   {
     let MyIcon = Icons[icon];
     return(
-        <li className = "one-icon-display" onClick={()=>this.onSelect(icon)} >
+        <li className = "one-icon-display" onClick={()=>this.onSelect(icon)} key = {icon}>
           <MyIcon />
         </li>
     );

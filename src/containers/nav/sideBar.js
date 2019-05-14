@@ -46,7 +46,6 @@ class DynamicSideBar extends React.Component
             </ListItemIcon>
             <ListItemText inset primary={node.label} />
             {this.props.state[node.label]?<Icons.ExpandLess/> : <Icons.ExpandMore/>}
-            {console.log(this.props.state[node.label])}
           </ListItem>
           <Divider />
           <Collapse in={this.props.state[node.label]} timeout="auto" unmountOnExit>

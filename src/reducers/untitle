@@ -2,3 +2,30 @@ return{
   ...state,
   [action.oneState]: !state[action.oneState]
 }
+
+<Route path = "/" component = {MyHome}  exact/>
+<Route path = "/my-app" component = {MyHome} exact/>
+<Route path = "/colors" component = {MyColor}/>
+<Route path = "/icons" component = {MyIconography}/>
+<Route path = "/components/button" component = {MyButtons}/>
+<Route path = "/components/table" component = {MyTables}/>
+<Route path = "/components/tabs" component = {MyTabs}/>
+<Route path = "/components/spinner" component = {MySpinner}/>
+<Route path = "/components/progress" component = {MyProgress}/>
+<Route path = "/components/messagebar" component = {MyMessageBar}/>
+<Route path = "/components/dialog" component = {MyDialog}/>
+<Route path = "/components/notification" component = {MyNotification}/>
+<Route path = "/components/avatar" component = {MyAvatar}/>
+<Route path = "/components/markdown" component = {MyMarkdown}/>
+<Route path = "/charts/line" component = {MyLine}/>
+<Route path = "/charts/bar" component = {MyBar}/>
+<Route path = "/charts/stackbar" component = {MyStackedBar}/>
+<Route path = "/charts/area" component = {MyArea}/>
+<Route path = "/charts/pie" component = {MyPie}/>
+<Route path = "/charts/scatterplot" component = {MyScatterplot}/>
+
+
+<Route path = "/" component = {MyHome}  exact/>
+<Route path = "/my-app" component = {MyHome} exact/>
+<Route path='*' component={Error} />
+{content}
