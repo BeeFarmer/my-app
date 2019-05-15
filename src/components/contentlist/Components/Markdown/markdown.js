@@ -46,6 +46,7 @@ class MyMarkdown extends React.Component
       let string = `
       import ReactMarkdown from 'react-markdown';
       import React from 'react';
+      import CodeBlock from 'your path';
 
       let string = ${sign}${this.buildString()}${sign}
 

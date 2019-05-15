@@ -14,7 +14,10 @@ const styles = theme => ({
     width: '100%',
     paddingTop: theme.spacing.unit * 3,
     paddingBottom: theme.spacing.unit * 3,
-    overflowX: 'auto'
+    overflowX: 'auto',
+  },
+  panel: {
+    backgroundColor: theme.palette.grey['100'],
   },
   heading: {
     fontSize: theme.typography.pxToRem(30),
@@ -100,7 +103,7 @@ It said she had been "in excellent physical health for her age, until recently c
   let output = (
     <div className={classes.root}>
       <h1 className = "panel-title"><b>Summary of Recent Head News (click to expand)</b></h1>
-      <ExpansionPanel>
+      <ExpansionPanel className={classes.panel}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography className={classes.heading}>WhatsApp discovers 'targeted' surveillance attack</Typography>
         </ExpansionPanelSummary>
@@ -120,7 +123,7 @@ It said she had been "in excellent physical health for her age, until recently c
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel>
+      <ExpansionPanel className={classes.panel}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography className={classes.heading}>Deadly seaplane collision in Ketchikan Alaska</Typography>
         </ExpansionPanelSummary>
@@ -140,7 +143,7 @@ It said she had been "in excellent physical health for her age, until recently c
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel>
+      <ExpansionPanel className={classes.panel}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography className={classes.heading}>Apple faces customer lawsuit over app store</Typography>
         </ExpansionPanelSummary>

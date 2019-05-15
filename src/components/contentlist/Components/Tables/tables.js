@@ -34,7 +34,7 @@ const styles = theme => ({
   },
   row: {
     '&:nth-of-type(odd)': {
-      backgroundColor: theme.palette.background.paper,
+      backgroundColor: theme.palette.grey['100'],
     },
   },
 });
@@ -70,7 +70,7 @@ function MyTables(props) {
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow className={classes.row} key={row.id}>
+            <TableRow className = {classes.row} key={row.id}>
               <CustomTableCell component="th" scope="row">
                 {row.name}
               </CustomTableCell>

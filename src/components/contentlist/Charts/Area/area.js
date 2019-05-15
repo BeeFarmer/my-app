@@ -29,7 +29,7 @@ class MyArea extends Component
     ];
     return (
       <div className = "area-display">
-        <XYPlot margin={{Bottom: 20, top: 30}} height={700} width= {700} yDomain={[0, 17]}>
+        <XYPlot margin={{Bottom: 20, top: 30}} height={700} width= {700} yDomain={[0, 18]}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis />
@@ -65,7 +65,7 @@ class MyArea extends Component
           <HorizontalGridLines />
           <XAxis />
           <YAxis />
-          <AreaSeries curve="curveLinear" data={data} color="#cd3b54"/>
+          <AreaSeries data={data} color="#cd3b54"/>
         </XYPlot>
       </div>
     );

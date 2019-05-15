@@ -21,7 +21,7 @@ class MyLine extends Component
       {x: 8, y: 2},
       {x: 9, y: 0},
       {x: 10, y: 3},
-      {x: 11, y: 10},
+      {x: 11, y: 11},
       {x: 12, y: 5},
       {x: 13, y: 7},
       {x: 14, y: 1},
@@ -29,7 +29,7 @@ class MyLine extends Component
     ];
     return (
       <div className = "line-display">
-        <XYPlot margin={{Bottom: 20, top: 30}} height={700} width= {700}>
+        <XYPlot margin={{Bottom: 20, top: 30}} height={700} width= {700} yDomain={[0, 12]} xDomain={[0, 16]}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis />

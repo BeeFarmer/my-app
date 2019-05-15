@@ -35,7 +35,7 @@ class MyStackedBar extends Component
 
     return (
       <div className = "stack-display">
-        <XYPlot margin={{Bottom: 70, top: 30}} xType="ordinal" width={700} height={700} stackBy="y">
+        <XYPlot margin={{Bottom: 70, top: 30}} xType="ordinal" width={700} height={700} stackBy="y" yDomain={[0, 50]}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis  />

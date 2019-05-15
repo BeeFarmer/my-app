@@ -149,6 +149,10 @@ iframe {
   justify-content: center;
   display: flex;
 }
+.lineMark-display {
+  justify-content: center;
+  display: flex;
+}
 .pie-display {
   justify-content: center;
   display: flex;
@@ -182,17 +186,20 @@ iframe {
 .row1 {
   padding-top: 30px;
   padding-bottom: 10px;
-  color: #17324d false;
+  color: #17324d !important;
+  width: 100%;
 }
 .row {
   padding-bottom: 10px;
-  color: #17324d false;
+  color: #17324d !important;
 }
 .section {
   width: 70%;
   margin-bottom: 30px;
 }
 .avatar-display {
+  width: 100%;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-around;
 }
@@ -311,6 +318,15 @@ iframe {
 }
 .appbar .home-icon {
   margin-right: 8px;
+}
+.appbar .home-icon a {
+  width: 32px;
+  height: 32px;
+}
+.appbar .home-icon a svg {
+  color: #fff !important;
+  height: 30px;
+  width: 40px;
 }
 .grow {
   flex-grow: 1;

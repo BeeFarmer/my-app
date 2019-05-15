@@ -130,6 +130,11 @@ const navItems = [
           component: MyLine
         },
         {
+          label: 'LineMark',
+          url: BASE_URL + 'charts/linemark',
+          icon: 'NavigateNext',
+        },
+        {
           label: 'Pie',
           url: BASE_URL + 'charts/pie',
           icon: 'NavigateNext',

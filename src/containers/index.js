@@ -22,6 +22,7 @@ import MyVerticalBar from '../components/contentlist/Charts/VerticalBar/vertical
 import MyStackedBar from '../components/contentlist/Charts/StackedBar/stackedBar.js';
 import MyArea from '../components/contentlist/Charts/Area/area.js';
 import MyPie from '../components/contentlist/Charts/Pie/pie.js';
+import MyLineMark from '../components/contentlist/Charts/LineMark/lineMark.js';
 import MyScatterplot from '../components/contentlist/Charts/Scatterplot/scatterplot.js';
 import MyAvatar from '../components/contentlist/Components/Avatar/avatar.js';
 import MyMarkdown from '../components/contentlist/Components/Markdown/markdown.js';
@@ -116,6 +117,7 @@ class App extends React.Component
              <Route path = "/components/markdown" component = {MyMarkdown}/>
              <Route path = "/components/panel" component = {MyPanel}/>
              <Route path = "/charts/line" component = {MyLine}/>
+             <Route path = "/charts/linemark" component = {MyLineMark}/>
              <Route path = "/charts/horizontalbar" component = {MyHorizontalBar}/>
              <Route path = "/charts/verticalbar" component = {MyVerticalBar}/>
              <Route path = "/charts/stackbar" component = {MyStackedBar}/>

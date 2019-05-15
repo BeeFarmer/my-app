@@ -12,7 +12,7 @@ class MyButtons extends React.Component
     return(
       <div>
             <br/>
-            <h3>Default</h3>
+            <h2><b>Default</b></h2>
             <div className="buttons">
                 <Button>Default</Button>
                 <Button color="primary">
@@ -25,7 +25,7 @@ class MyButtons extends React.Component
                     Disabled
                 </Button>
             </div>
-            <h3>Outlined</h3>
+            <h2><b>Outlined</b></h2>
             <div className="buttons">
                 <Button variant="outlined">Default</Button>
                 <Button variant="outlined" color="primary">
@@ -38,7 +38,7 @@ class MyButtons extends React.Component
                     Disabled
                 </Button>
             </div>
-            <h3>Contained</h3>
+            <h2><b>Contained</b></h2>
             <div className="buttons">
                 <Button variant="contained">Default</Button>
                 <Button variant="contained" color="primary">
@@ -51,7 +51,7 @@ class MyButtons extends React.Component
                     Disabled
                 </Button>
             </div>
-            <h3>Size</h3>
+            <h2><b>Size</b></h2>
             <div className="buttons">
                 <Button size="small" variant="contained">
                     Small
@@ -77,11 +77,11 @@ class MyButtons extends React.Component
     let myName = "Button";
     let string = `
     import Button from '@material-ui/core/Button';
-      <Button color="primary | secondary" variant="outlined | contained" size="small | medium | large">
-        Button
+      <Button color="primary" variant="outlined ">
+        Button1
       </Button>
-      <Button disabled>
-        Disabled Button
+      <Button color="secondary" variant="contained">
+        Button2
       </Button>`;
 
     let code = (<ReactMarkdown source={string} renderers={{ code: CodeBlock }}/>);

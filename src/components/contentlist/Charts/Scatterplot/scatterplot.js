@@ -53,8 +53,6 @@ class MyScatterplot extends Component
       {x: 5, y: 7, size: 10},
       {x: 6, y: 6, size: 10},
       {x: 7, y: 3, size: 5},
-      {x: 8, y: 2, size: 5},
-      {x: 9, y: 0, size: 5}
     ];
     return (
       <div>
