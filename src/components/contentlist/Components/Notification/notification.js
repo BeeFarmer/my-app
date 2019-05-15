@@ -70,7 +70,7 @@ function MySnackbarContent(props) {
         <IconButton
           key="close"
           aria-label="Close"
-          color="inherit"
+          color="#A52A2A"
           className={classes.close}
           onClick={onClose}
         >
@@ -122,7 +122,7 @@ class MyNotification extends React.Component {
       <div>
         <div className="button-style">
         <Button onClick={this.handleClick}>
-          View Your Reservation Status
+          Click View Your Reservation Status
         </Button>
         </div>
         <Snackbar

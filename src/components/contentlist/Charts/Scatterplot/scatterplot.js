@@ -10,15 +10,19 @@ class MyScatterplot extends Component
   renderScatterplot()
   {
     const data = [
-      {x: 0, y: 8, size: 15},
+      {x: 0, y: 8, size: 12},
       {x: 1, y: 5, size: 10},
       {x: 2, y: 4, size: 5},
+      {x: 2, y: 1, size: 10},
       {x: 3, y: 9, size: 5},
       {x: 4, y: 1, size: 10},
+      {x: 4, y: 4, size: 15},
       {x: 5, y: 7, size: 10},
       {x: 6, y: 6, size: 10},
       {x: 7, y: 3, size: 5},
       {x: 8, y: 2, size: 10},
+      {x: 8, y: 6, size: 5},
+      {x: 9, y: 8, size: 12},
       {x: 10, y: 0, size: 5},
       {x: 10, y: 5, size: 10},
       {x: 3, y: 3, size: 5},

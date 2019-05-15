@@ -18,7 +18,7 @@ const CustomTableCell = withStyles(theme => ({
   },
   body: {
     fontSize: 14,
-    color: theme.palette.primary.light
+    color: theme.palette.primary.dark
   },
 }))(TableCell);
 

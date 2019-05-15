@@ -26,8 +26,8 @@ class MyDialog extends React.Component {
   {
     return (
       <div className = "dialog-button">
-        <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
-          Your New Cash Back Offer is Ready
+        <Button variant="outlined" onClick={this.handleClickOpen}>
+          New Cash Back Offers ! ! Click it ! !
         </Button>
         <Dialog
           open={this.state.open}

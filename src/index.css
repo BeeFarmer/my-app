@@ -218,6 +218,11 @@ iframe {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+.dialog-button button {
+  border: 1px solid rgba(63,81,181,0.5);
+  background-color: #a52a2a;
+  color: #fff;
+}
 .display-left {
   text-align: right;
 }
@@ -227,6 +232,8 @@ iframe {
 }
 .button-style button {
   border: 1px solid rgba(63,81,181,0.5);
+  background-color: #a52a2a;
+  color: #fff;
 }
 .panel-title {
   padding-bottom: 20px;
