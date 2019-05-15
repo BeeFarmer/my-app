@@ -202,6 +202,7 @@ iframe {
   margin-bottom: 30px;
   display: flex;
   justify-content: space-around;
+  overflow: auto;
 }
 .buttons {
   width: 100%;
@@ -282,17 +283,22 @@ iframe {
   width: 40px;
   height: 40px;
 }
+.root {
+  flex-grow: 1;
+}
 .paper {
   background-color: #fffff0 !important;
   text-align: center !important;
-  overflow: auto;
+  overflow: auto !important;
 }
 .templete-appbar {
   background-color: #a52a2a !important;
-  overflow: auto;
+  overflow: auto !important;
+  width: 100% !important;
 }
 .tab-content {
   text-align: center;
+  overflow: auto !important;
 }
 .footer {
   border-top: 1px solid #e6ecf2;
@@ -318,15 +324,6 @@ iframe {
 }
 .appbar .home-icon {
   margin-right: 8px;
-}
-.appbar .home-icon a {
-  width: 32px;
-  height: 32px;
-}
-.appbar .home-icon a svg {
-  color: #fff !important;
-  height: 30px;
-  width: 40px;
 }
 .grow {
   flex-grow: 1;

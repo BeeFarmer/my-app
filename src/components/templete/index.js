@@ -7,7 +7,8 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import ReactMarkdown from 'react-markdown';
-import CodeBlock from '../../'
+import CodeBlock from '../../';
+import {connect} from 'react-redux';
 
 
 class MyTemplete extends React.Component
@@ -15,22 +16,19 @@ class MyTemplete extends React.Component
   constructor(props)
   {
     super(props);
-    this.state = {
-      value : 0
-    }
   }
 
   handleChange = (event, value) => {
-    this.setState({ value });
+    this.props.switchTabs(event, value);
   };
 
 
 
   render() {
-    const { value } = this.state;
+    const { value } = this.props;
 
     return (
-      <div>
+      <div className = "root">
         <Paper className="paper" elevation = {20}>
           <AppBar position="static" className="templete-appbar">
             <div className = "tab-content">
@@ -48,4 +46,18 @@ class MyTemplete extends React.Component
   }
 }
 
-export default MyTemplete;
+const mapStateToProps = (state) =>{
+  return{
+    value: state.value
+  }
+}
+
+const mapDispatchtoProps = (dispatch) =>{
+  return{
+    switchTabs: (event, value) => {dispatch({type: 'Switch_Tabs', event: event, value: value})},
+  }
+}
+
+
+
+export default connect(mapStateToProps,mapDispatchtoProps)(MyTemplete);

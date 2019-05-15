@@ -3,7 +3,8 @@ import Data from "../containers/nav/data.js";
 const initState =  {
   anchorEl : null, //control right menu
   leftOpen : false, //control left menu
-  data : Data.navItems //left menu table of contents data
+  data : Data.navItems, //left menu table of contents data
+  value: 0
 }
 
 const rootReducer = (state = initState, action) =>{
@@ -33,6 +34,13 @@ const rootReducer = (state = initState, action) =>{
     return{
       ...state,
       [action.oneState]:  !state[action.oneState]
+    }
+  }
+  else if(action.type === 'Switch_Tabs')
+  {
+    return{
+      ...state,
+      value: action.value
     }
   }
     return state;

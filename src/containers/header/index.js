@@ -1,7 +1,5 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -17,15 +15,12 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 import List from '@material-ui/core/List';
 import DynamicSideBar from '../nav/sideBar.js'
 import Collapse from '@material-ui/core/Collapse';
 import { NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
-import AvatarBg from '../../assets/images/home1.png';
-import * as Icons from '@material-ui/icons';
+import HomeIcon from '../../assets/images/home1.png';
 
 class Header extends React.Component
 {
@@ -45,7 +40,6 @@ class Header extends React.Component
 
   render()
   {
-    let HomeIcon = Icons['Home'];
     const { anchorEl } = this.props;
     return (
       <div className = "root">
@@ -62,7 +56,7 @@ class Header extends React.Component
 
             <div className = "home-icon">
               <NavLink to="/">
-                <Avatar src = {AvatarBg} />
+                <Avatar src = {HomeIcon} />
               </NavLink>
             </div>
 

@@ -17,7 +17,7 @@ const styles = theme => ({
     overflowX: 'auto',
   },
   panel: {
-    backgroundColor: theme.palette.grey['100'],
+    backgroundColor: theme.palette.grey['200'],
   },
   heading: {
     fontSize: theme.typography.pxToRem(30),
@@ -25,7 +25,7 @@ const styles = theme => ({
   },
   content: {
     textAlign: 'left',
-    fontSize: theme.typography.pxToRem(18),
+    fontSize: theme.typography.pxToRem(20),
     fontWeight: theme.typography.fontWeightRegular,
   },
 });
