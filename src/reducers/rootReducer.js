@@ -1,15 +1,18 @@
-import Data from "../containers/nav/data.js";
+import Data from "./data.js";
 
 const initState =  {
   anchorEl : null, //control right menu
+  rightContent: Data.rightMenu, // right menu content
   leftOpen : false, //control left menu
   data : Data.navItems, //left menu table of contents data
-  value: 0
+  value: 0, //central tab display
+  event: null
 }
 
 const rootReducer = (state = initState, action) =>{
   if(action.type === 'Show_Right_Menu')
   {
+    console.log(state.target);
     return{
       ...state,
       anchorEl: action.event.currentTarget
@@ -40,7 +43,15 @@ const rootReducer = (state = initState, action) =>{
   {
     return{
       ...state,
-      value: action.value
+      value: action.value,
+      event: action.event
+    }
+  }
+  else if(action.type === 'Reset_Tabs_Value')
+  {
+    return{
+      ...state,
+      value: 0
     }
   }
     return state;

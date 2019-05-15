@@ -86,9 +86,11 @@ function MyTables(props) {
 
     let string = `
     import Table from '@material-ui/core/Table';
+
       <Table>
         <TableHead>
           <TableRow>
+          {Your head}
           </TableRow>
         </TableHead>
        <TableBody>

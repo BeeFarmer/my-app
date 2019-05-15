@@ -38,9 +38,25 @@ class Header extends React.Component
     this.props.closeRightMenu();
   };
 
+  loopMenu(content)
+  {
+    let menu = [];
+    for( let i in content)
+    {
+      menu.push(<MenuItem ><a href={content[i].link} target="_blank">{content[i].label}</a></MenuItem>);
+    }
+    return(
+      <div>
+        {menu}
+      </div>
+    )
+  }
+
   render()
   {
     const { anchorEl } = this.props;
+    const { rightContent } = this.props;
+    let output = this.loopMenu(rightContent);
     return (
       <div className = "root">
         <AppBar className="appbar">
@@ -67,10 +83,8 @@ class Header extends React.Component
             <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>
               <MoreVertIcon />
             </IconButton>
-            <Menu  anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
-              <MenuItem ><a href="https://github.com/uber/react-vis" target="_blank">React-Vis</a></MenuItem>
-              <MenuItem ><a href="https://material-ui.com/" target="_blank">Material-UI</a></MenuItem>
-              <MenuItem ><a href="https://reactjs.org/" target="_blank">React</a></MenuItem>
+            <Menu  className="rightMenu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
+              {output}
            </Menu>
 
           </Toolbar>
@@ -96,7 +110,8 @@ class Header extends React.Component
 
 const mapStateToProps = (state) =>{
   return{
-    anchorEl: state.anchorEl
+    anchorEl: state.anchorEl,
+    rightContent: state.rightContent
   }
 }
 

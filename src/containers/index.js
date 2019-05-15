@@ -146,7 +146,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchtoProps = (dispatch) =>{
   return{
-    leftMenuOpen: () => {dispatch({type: 'Show_Left_Menu'})}
+    leftMenuOpen: () => {dispatch({type: 'Show_Left_Menu'})},
   }
 }
 

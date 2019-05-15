@@ -164,16 +164,11 @@ class MyNotification extends React.Component {
           }}
           open={this.state.open}
           onClose={this.handleClose}
-          message={<span>Note archived</span>}
+          message={<span>Your message</span>}
           action={[
             <Button onClick={this.handleClose}>
-              UNDO
+              your option
             </Button>,
-            <IconButton
-              onClick={this.handleClose}
-            >
-              <CloseIcon />
-            </IconButton>,
           ]}
         />
        </div>`;

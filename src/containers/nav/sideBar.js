@@ -1,14 +1,10 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SendIcon from '@material-ui/icons/Send';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
@@ -16,8 +12,7 @@ import Divider from '@material-ui/core/Divider';
 import DeleteIcon from '@material-ui/icons/Delete';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
-import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
-import Data from "./data.js";
+import { Link } from 'react-router-dom';
 import * as Icons from '@material-ui/icons';
 import {connect} from 'react-redux';
 
@@ -31,6 +26,10 @@ class DynamicSideBar extends React.Component
   openSubList(oneState){
     this.props.showSublist(oneState);
   }
+
+  resetTabView = () => {
+    this.props.resetValue();
+  };
 
   renderNavItem(node)
   {
@@ -61,7 +60,7 @@ class DynamicSideBar extends React.Component
     {
       return(
         <div>
-        <ListItem button component = {Link} to = {node.url} key = {node.label}>
+        <ListItem button component = {Link} to = {node.url} key = {node.label} onClick = {this.resetTabView}>
           <ListItemIcon>
             <MyIcon />
           </ListItemIcon>
@@ -85,7 +84,7 @@ class DynamicSideBar extends React.Component
       <div>
       {output}
       </div>
-    )
+    );
   }
 
   loopSubItems(list)
@@ -120,6 +119,7 @@ const mapStateToProps = (state) =>{
 const mapDispatchtoProps = (dispatch) =>{
   return{
     showSublist: (oneState) => {dispatch({type: 'Show_Sublist', oneState: oneState})},
+    resetValue: () => {dispatch({type: 'Reset_Tabs_Value'})}
   }
 }
 

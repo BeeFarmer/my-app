@@ -67,22 +67,22 @@ class MyDialog extends React.Component {
     import DialogTitle from '@material-ui/core/DialogTitle'
 
     <div>
-      <Button variant="outlined" color="primary" onClick={this.handleClickOpen}>
+      <Button onClick={this.handleClickOpen}>
         Open alert dialog
       </Button>
       <Dialog open={this.state.open} onClose={this.handleClose} >
         <DialogTitle>{"open dialog?"}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            You have one massage
+            Your contents
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={this.handleClose} color="primary">
-            check
+          <Button onClick={this.handleClose}>
+            option 1
           </Button>
-          <Button onClick={this.handleClose} color="primary" autoFocus>
-            ignore
+          <Button onClick={this.handleClose} >
+            option 2
           </Button>
         </DialogActions>
       </Dialog>
