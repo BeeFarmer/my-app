@@ -81,15 +81,13 @@ class MyTabs extends React.Component {
     );
   }
   render() {
-    const { classes } = this.props;
-    const { value } = this.state;
     let output = this.renderTabs();
     let myName = "Tabs";
     let string = `
     import AppBar from '@material-ui/core/AppBar';
     import Tabs from '@material-ui/core/Tabs';
     import Tab from '@material-ui/core/Tab';
-    
+
     <div >
       <AppBar >
         <Tabs value={value} onChange={this.handleChange}>

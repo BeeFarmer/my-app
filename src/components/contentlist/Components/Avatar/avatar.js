@@ -1,7 +1,5 @@
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import FolderIcon from '@material-ui/icons/Folder';
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined'
 import ThreeDRotationIcon from '@material-ui/icons/ThreeDRotation';

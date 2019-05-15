@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyTemplete  from '../../../templete';
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines, MarkSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, MarkSeries} from 'react-vis';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 
@@ -42,7 +42,7 @@ class MyScatterplot extends Component
     let output = this.renderScatterplot();
     let myName = "Scatterplot";
     let string = `
-    import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines, MarkSeries} from 'react-vis';
+    import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, MarkSeries} from 'react-vis';
 
     const data = [
       {x: 0, y: 8, size: 15},

@@ -3,18 +3,13 @@ import Avatar from '@material-ui/core/Avatar';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
 import Menu from '@material-ui/core/Menu';
-import Icon from '@material-ui/core/Icon';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
 import DynamicSideBar from '../nav/sideBar.js'
 import Collapse from '@material-ui/core/Collapse';
@@ -24,12 +19,6 @@ import HomeIcon from '../../assets/images/home1.png';
 
 class Header extends React.Component
 {
-
-  constructor(props)
-  {
-    super(props);
-  }
-
   handleClick = (event) => {
     this.props.showRightMenu(event);
   };
@@ -43,7 +32,7 @@ class Header extends React.Component
     let menu = [];
     for( let i in content)
     {
-      menu.push(<MenuItem ><a href={content[i].link} target="_blank">{content[i].label}</a></MenuItem>);
+      menu.push(<MenuItem key = {content[i].label}><a href={content[i].link} target="_blank" rel="noopener noreferrer">{content[i].label}</a></MenuItem>);
     }
     return(
       <div>
@@ -77,7 +66,7 @@ class Header extends React.Component
             </div>
 
             <Typography variant="h6" className = "grow">
-              <h1 className = "titleColor">Design Reference</h1>
+              <span className = "titleColor">Design Reference</span>
             </Typography>
 
             <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>

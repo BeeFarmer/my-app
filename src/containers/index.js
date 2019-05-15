@@ -1,6 +1,5 @@
-import React, { Component, Fragment} from 'react';
-import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter, Switch, HashRouter } from 'react-router-dom';
+import React  from 'react';
+import { Route, Switch, HashRouter } from 'react-router-dom';
 import "../../node_modules/react-vis/dist/style.css";
 import Header  from './header';
 import MyColor from '../components/contentlist/Colors/colors.js';
@@ -31,62 +30,10 @@ import {connect} from 'react-redux';
 
 class App extends React.Component
 {
-  constructor(props)
-  {
-    super(props);
-
-  }
-
   handleNavOpen = () =>{
     this.props.leftMenuOpen();
   };
 
-  // renderOneRouter(node)
-  // {
-  //   if(node.subNavItems)
-  //   {
-  //     let subContent = this.routerSubLoop(node.subNavItems);
-  //     return(
-  //       <div>{subContent}</div>
-  //     )
-  //   }
-  //   else
-  //   {
-  //     if(node.label !== 'Home')
-  //     {
-  //       return(
-  //         <Route path = {node.url} component = {node.component} key = {node.label}/>
-  //       )
-  //     }
-  //   }
-  // }
-  //
-  // routerSubLoop(routers)
-  // {
-  //   let subContent = []
-  //   for(let i in routers)
-  //     {
-  //       subContent.push(this.renderOneRouter(routers[i]));
-  //     }
-  //   return subContent;
-  // }
-  //
-  // routerLoop(routers)
-  // {
-  //   let output = [];
-  //   output.push(<Route path = "/" component = {MyHome}  exact/>);
-  //   output.push(<Route path = "/my-app" component = {MyHome} exact/>);
-  //   for(let i in routers)
-  //   {
-  //     output.push(this.renderOneRouter(routers[i]));
-  //   }
-  //   //output.push(<Route  component = {Error}/>);
-  //   return(
-  //     <Fragment>
-  //     {output}
-  //     </Fragment>
-  //   );
-  // }
   render()
   {
     //const { data } = this.props;
@@ -101,30 +48,30 @@ class App extends React.Component
          <div className = {this.props.leftOpen ? "move-right" : "default"}>
              <div className = "content">
              <Switch>
-             <Route path = "/" component = {MyHome}  exact/>
-             <Route path = "/my-app" component = {MyHome} exact/>
-             <Route path = "/colors" component = {MyColor}/>
-             <Route path = "/icons" component = {MyIconography}/>
-             <Route path = "/components/button" component = {MyButtons}/>
-             <Route path = "/components/table" component = {MyTables}/>
-             <Route path = "/components/tabs" component = {MyTabs}/>
-             <Route path = "/components/spinner" component = {MySpinner}/>
+             <Route path = "/" component = {MyHome}  key = "/home" exact/>
+             <Route path = "/my-app" component = {MyHome} key = "/my-app" exact/>
+             <Route path = "/colors" component = {MyColor} key = "/colors"/>
+             <Route path = "/icons" component = {MyIconography} key = "/icons"/>
+             <Route path = "/components/button" component = {MyButtons} key = "/components/button"/>
+             <Route path = "/components/table" component = {MyTables} key = "/components/table"/>
+             <Route path = "/components/tabs" component = {MyTabs} key = "/components/tabs"/>
+             <Route path = "/components/spinner" component = {MySpinner} key = "/components/spinner"/>
              <Route path = "/components/progress" component = {MyProgress}/>
-             <Route path = "/components/messagebar" component = {MyMessageBar}/>
-             <Route path = "/components/dialog" component = {MyDialog}/>
-             <Route path = "/components/notification" component = {MyNotification}/>
-             <Route path = "/components/avatar" component = {MyAvatar}/>
-             <Route path = "/components/markdown" component = {MyMarkdown}/>
-             <Route path = "/components/panel" component = {MyPanel}/>
-             <Route path = "/charts/line" component = {MyLine}/>
-             <Route path = "/charts/linemark" component = {MyLineMark}/>
-             <Route path = "/charts/horizontalbar" component = {MyHorizontalBar}/>
-             <Route path = "/charts/verticalbar" component = {MyVerticalBar}/>
-             <Route path = "/charts/stackbar" component = {MyStackedBar}/>
-             <Route path = "/charts/area" component = {MyArea}/>
-             <Route path = "/charts/pie" component = {MyPie}/>
-             <Route path = "/charts/scatterplot" component = {MyScatterplot}/>
-             <Route  component = {Error}/>
+             <Route path = "/components/messagebar" component = {MyMessageBar} key = "/components/messagebar"/>
+             <Route path = "/components/dialog" component = {MyDialog} key = "/components/dialog"/>
+             <Route path = "/components/notification" component = {MyNotification} key = "/components/notification"/>
+             <Route path = "/components/avatar" component = {MyAvatar} key = "/components/avatar"/>
+             <Route path = "/components/markdown" component = {MyMarkdown} key = "/components/markdown"/>
+             <Route path = "/components/panel" component = {MyPanel} key = "/components/panel"/>
+             <Route path = "/charts/line" component = {MyLine} key = "/charts/line"/>
+             <Route path = "/charts/linemark" component = {MyLineMark} key = "/charts/linemark"/>
+             <Route path = "/charts/horizontalbar" component = {MyHorizontalBar} key = "/charts/horizontalbar"/>
+             <Route path = "/charts/verticalbar" component = {MyVerticalBar} key = "/charts/verticalbar"/>
+             <Route path = "/charts/stackbar" component = {MyStackedBar} key = "/charts/stackbar"/>
+             <Route path = "/charts/area" component = {MyArea} key = "/charts/area"/>
+             <Route path = "/charts/pie" component = {MyPie} key = "/charts/pie"/>
+             <Route path = "/charts/scatterplot" component = {MyScatterplot} key = "/charts/scatterplot"/>
+             <Route  component = {Error} key = "error"/>
              </Switch>
              </div>
          </div>

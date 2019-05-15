@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyTemplete  from '../../../templete';
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines, RadialChart} from 'react-vis';
+import {RadialChart} from 'react-vis';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 class MyPie extends Component
@@ -27,7 +27,7 @@ class MyPie extends Component
     let output = this.renderPie();
     let myName = "Pie";
     let string = `
-    import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines, RadialChart} from 'react-vis';
+    import {RadialChart} from 'react-vis';
 
     const myData = [
     {angle: 1, label: 'Type 1'},

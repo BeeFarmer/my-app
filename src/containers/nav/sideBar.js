@@ -1,28 +1,16 @@
 import React from 'react';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
-import StarBorder from '@material-ui/icons/StarBorder';
 import Divider from '@material-ui/core/Divider';
-import DeleteIcon from '@material-ui/icons/Delete';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
 import { Link } from 'react-router-dom';
 import * as Icons from '@material-ui/icons';
 import {connect} from 'react-redux';
 
 class DynamicSideBar extends React.Component
 {
-  constructor(props)
-  {
-    super(props);
-  }
-
   openSubList(oneState){
     this.props.showSublist(oneState);
   }

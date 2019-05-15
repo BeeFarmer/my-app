@@ -1,5 +1,3 @@
-import * as Icons from '@material-ui/icons/';
-import * as Charts from 'react-vis';
 import CodeBlock from './CodeBlock';
 
 // export all components, Icons, Charts

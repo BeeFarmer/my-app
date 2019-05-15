@@ -1,14 +1,8 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
-import ReactMarkdown from 'react-markdown';
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 class MyHome extends React.Component
 {
-  constructor(props)
-  {
-    super(props);
-  }
   render() {
     return (
       <Paper className = "home" elevation = {20}>

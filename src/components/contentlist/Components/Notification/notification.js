@@ -117,7 +117,7 @@ class MyNotification extends React.Component {
 
   renderNotification()
   {
-    const { classes } = this.props;
+
     return(
       <div>
         <div className="button-style">

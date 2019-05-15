@@ -5,12 +5,7 @@ import React from 'react';
 
 class MyMarkdown extends React.Component
 {
-  constructor(props)
-  {
-    super(props);
-  }
-
-   buildString (){
+  buildString (){
 
     let text =   `
         import Badge from '@material-ui/core/Badge';

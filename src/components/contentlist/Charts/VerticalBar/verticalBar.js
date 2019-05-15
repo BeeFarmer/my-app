@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyTemplete  from '../../../templete';
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,VerticalBarSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines,VerticalBarSeries} from 'react-vis';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 class MyVerticalBar extends Component
@@ -46,7 +46,7 @@ class MyVerticalBar extends Component
     let output = this.renderBar();
     let myName = "Bar";
     let string = `
-    import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,VerticalBarSeries} from 'react-vis';
+    import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines,VerticalBarSeries} from 'react-vis';
 
     const data1 = [
       {x: 'Apple', y: 10},

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyTemplete  from '../../../templete';
-import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,AreaSeries} from 'react-vis';
+import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines, AreaSeries} from 'react-vis';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 
@@ -34,7 +34,7 @@ class MyArea extends Component
           <HorizontalGridLines />
           <XAxis />
           <YAxis />
-          <AreaSeries curve="curveLinear" data={data} color="#cd3b54"/>
+          <AreaSeries curve="curveMonotoneX" data={data} color="#cd3b54"/>
         </XYPlot>
       </div>
     );
@@ -44,7 +44,7 @@ class MyArea extends Component
     let output = this.renderArea();
     let myName = "Area";
     let string = `
-    import {XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeries, VerticalGridLines,AreaSeries} from 'react-vis';
+    import {XYPlot, XAxis, YAxis, HorizontalGridLines, VerticalGridLines,AreaSeries} from 'react-vis';
 
     const data = [
       {x: 0, y: 8},

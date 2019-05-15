@@ -1,0 +1,46 @@
+// renderOneRouter(node)
+// {
+//   if(node.subNavItems)
+//   {
+//     let subContent = this.routerSubLoop(node.subNavItems);
+//     return(
+//       <div>{subContent}</div>
+//     )
+//   }
+//   else
+//   {
+//     if(node.label !== 'Home')
+//     {
+//       return(
+//         <Route path = {node.url} component = {node.component} key = {node.label}/>
+//       )
+//     }
+//   }
+// }
+//
+// routerSubLoop(routers)
+// {
+//   let subContent = []
+//   for(let i in routers)
+//     {
+//       subContent.push(this.renderOneRouter(routers[i]));
+//     }
+//   return subContent;
+// }
+//
+// routerLoop(routers)
+// {
+//   let output = [];
+//   output.push(<Route path = "/" component = {MyHome}  exact/>);
+//   output.push(<Route path = "/my-app" component = {MyHome} exact/>);
+//   for(let i in routers)
+//   {
+//     output.push(this.renderOneRouter(routers[i]));
+//   }
+//   //output.push(<Route  component = {Error}/>);
+//   return(
+//     <Fragment>
+//     {output}
+//     </Fragment>
+//   );
+// }
