@@ -173,7 +173,7 @@ iframe {
   overflow: auto;
 }
 .iframe {
-  width: 1200px;
+  width: 1600px;
   height: 700px;
   margin-bottom: 30px;
 }
@@ -358,15 +358,18 @@ iframe {
 .move-right {
   padding-left: 260px;
   width: 100vw;
+  justify-content: center;
 }
 .default {
-  padding-left: 100px;
+  padding-left: 20px;
   width: 100vw;
+  justify-content: center;
 }
 .content {
   min-height: calc(100vh - 30px);
   padding-top: 50px;
-  padding-right: 20px;
+  margin-right: 20px;
+  padding-right: 18px;
 }
 .footer-position {
   margin-top: 30px;
@@ -375,4 +378,10 @@ iframe {
 }
 .ListItem {
   padding-left: 0px;
+}
+.on-click svg {
+  color: #a52a2a;
+}
+.on-click span {
+  color: #a52a2a;
 }

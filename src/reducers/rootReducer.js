@@ -3,7 +3,7 @@ import Data from "./data.js";
 const initState =  {
   anchorEl : null, //control right menu
   rightContent: Data.rightMenu, // right menu content
-  leftOpen : false, //control left menu
+  leftOpen : true, //control left menu
   data : Data.navItems, //left menu table of contents data
   value: 0, //central tab display
   event: null
@@ -34,9 +34,20 @@ const rootReducer = (state = initState, action) =>{
   }
   else if(action.type === 'Show_Sublist')
   {
-    return{
-      ...state,
-      [action.oneState]:  !state[action.oneState]
+      return{
+        ...state,
+        [action.oneState]:  !state[action.oneState]
+      }
+
+  }
+  else if(action.type === 'Set_State')
+  {
+    if(action.bool && state[action.oneState] === undefined)
+    {
+      return{
+        ...state,
+        [action.oneState]:  action.bool
+      }
     }
   }
   else if(action.type === 'Switch_Tabs')

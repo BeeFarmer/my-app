@@ -44,3 +44,35 @@
 //     </Fragment>
 //   );
 // }
+
+<div>
+<NavLink exact = {node.url === '/'} to={node.url} key={node.label} activeClassName="on-click">
+<ListItem button onClick = {this.resetTabView}>
+  <ListItemIcon>
+    <MyIcon />
+  </ListItemIcon>
+  <ListItemText primary={node.label} />
+</ListItem>
+</NavLink>
+<Divider />
+</div>
+
+else if(action.type === 'Show_Sublist')
+{
+  let expand = true;
+  if(action.bool && state[action.oneState]===undefined)
+  {
+    return{
+      ...state,
+      refresh: state.refresh + 1,
+      [action.oneState]:  !!state[action.oneState]
+    }
+  }
+  else
+  {
+    return{
+      ...state,
+      [action.oneState]:  !state[action.oneState],
+    }
+  }
+}

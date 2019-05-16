@@ -5,56 +5,62 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import Divider from '@material-ui/core/Divider';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import * as Icons from '@material-ui/icons';
 import {connect} from 'react-redux';
 
 class DynamicSideBar extends React.Component
 {
-  openSubList(oneState){
-    this.props.showSublist(oneState);
-  }
+  openSubList(oneState,bool){
+   this.props.showSublist(oneState,bool);
+ }
 
-  resetTabView = () => {
-    this.props.resetValue();
-  };
+ resetTabView = () => {
+   this.props.resetValue();
+ };
 
   renderNavItem(node)
   {
     const MyIcon = Icons[node.icon];
     if(node.subNavItems)
     {
-      let listItems = this.loopSubItems(node.subNavItems)
-      return(
-        <div>
-          <ListItem button onClick={()=>{this.openSubList(node.label)}} key = {node.label}>
-            <ListItemIcon>
-              <MyIcon />
-            </ListItemIcon>
-            <ListItemText inset primary={node.label} />
-            {this.props.state[node.label]?<Icons.ExpandLess/> : <Icons.ExpandMore/>}
-          </ListItem>
-          <Divider />
-          <Collapse in={this.props.state[node.label]} timeout="auto" unmountOnExit>
-          <List component="div">
-           {listItems}
-          </List>
-          </Collapse>
+      let listItems = this.loopSubItems(node.subNavItems);
+      const expand = this.props.state[node.label] === undefined && !expand
+                ? window.location.hash.indexOf(node.url) > -1
+                : this.props.state[node.label];
+      this.props.setState(node.label,expand);
+        return(
+          <div>
+            <ListItem button onClick={()=>{this.openSubList(node.label,expand)}} key = {node.label}>
+              <ListItemIcon>
+                <MyIcon />
+              </ListItemIcon>
+              <ListItemText inset primary={node.label} />
+              {expand?<Icons.ExpandLess/> : <Icons.ExpandMore/>}
+            </ListItem>
+            <Divider />
+            <Collapse in={expand} timeout="auto" unmountOnExit>
+            <List component="div">
+             {listItems}
+            </List>
+            </Collapse>
 
-        </div>
+          </div>
       );
     }
     else
     {
       return(
         <div>
-        <ListItem button component = {Link} to = {node.url} key = {node.label} onClick = {this.resetTabView}>
-          <ListItemIcon>
-            <MyIcon />
-          </ListItemIcon>
-          <ListItemText primary={node.label} />
-        </ListItem>
-        <Divider />
+          <NavLink exact = {node.url === '/'} to={node.url} key={node.label} activeClassName="on-click">
+            <ListItem button onClick = {this.resetTabView}>
+              <ListItemIcon>
+                <MyIcon />
+              </ListItemIcon>
+              <ListItemText primary={node.label} />
+            </ListItem>
+            </NavLink>
+          <Divider />
         </div>
       );
     }
@@ -100,13 +106,14 @@ class DynamicSideBar extends React.Component
 const mapStateToProps = (state) =>{
   return{
     data: state.data,
-    state: state
+    state: state,
   }
 }
 
 const mapDispatchtoProps = (dispatch) =>{
   return{
-    showSublist: (oneState) => {dispatch({type: 'Show_Sublist', oneState: oneState})},
+    showSublist: (oneState,bool) => {dispatch({type: 'Show_Sublist', oneState: oneState, bool: bool})},
+    setState: (oneState,bool) => {dispatch({type: 'Set_State', oneState: oneState, bool: bool})},
     resetValue: () => {dispatch({type: 'Reset_Tabs_Value'})}
   }
 }
