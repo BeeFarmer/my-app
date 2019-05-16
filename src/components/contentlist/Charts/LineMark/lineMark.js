@@ -48,8 +48,8 @@ class MyLineMark extends Component
     return (
       <div className = "lineMark-display">
         <XYPlot margin={{Bottom: 20, top: 30}} xDomain={[0, 16]} yDomain={[0, 26]} width={700} height={700}>
-        <VerticalGridLines />
-        <HorizontalGridLines />
+        <VerticalGridLines/>
+        <HorizontalGridLines/>
         <XAxis />
         <YAxis />
         <LineMarkSeries

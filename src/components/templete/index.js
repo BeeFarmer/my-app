@@ -4,6 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Paper from '@material-ui/core/Paper';
 import {connect} from 'react-redux';
+import TempleteAction from '../../actions/TempleteAction/templeteAction.js'
 
 
 class MyTemplete extends React.Component
@@ -44,7 +45,7 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchtoProps = (dispatch) =>{
   return{
-    switchTabs: (event, value) => {dispatch({type: 'Switch_Tabs', event: event, value: value})},
+    switchTabs: (event, value) => {dispatch(TempleteAction.SwitchTabs(event,value))},
   }
 }
 

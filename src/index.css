@@ -141,6 +141,11 @@ iframe {
   justify-content: center;
   display: flex;
 }
+.circular-display {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+}
 .bar-display {
   justify-content: center;
   display: flex;
@@ -156,6 +161,7 @@ iframe {
 .pie-display {
   justify-content: center;
   display: flex;
+  margin: auto;
 }
 .scatterplot-display {
   display: flex;
@@ -164,6 +170,7 @@ iframe {
 .stack-display {
   justify-content: center;
   display: flex;
+  margin: auto;
 }
 .bar-display {
   justify-content: center;
@@ -290,18 +297,17 @@ iframe {
   width: 40px;
   height: 40px;
 }
-.root {
-  flex-grow: 1;
-}
 .paper {
   background-color: #fffff0 !important;
   text-align: center !important;
   overflow: auto !important;
 }
+.paper header {
+  width: 100% !important;
+}
 .templete-appbar {
   background-color: #a52a2a !important;
   overflow: auto !important;
-  width: 100% !important;
 }
 .tab-content {
   text-align: center;

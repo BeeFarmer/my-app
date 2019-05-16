@@ -16,6 +16,7 @@ import Collapse from '@material-ui/core/Collapse';
 import { NavLink } from 'react-router-dom';
 import {connect} from 'react-redux';
 import HomeIcon from '../../assets/images/home1.png';
+import HomeAction from '../../actions/HeaderAction/headerAction.js';
 
 class Header extends React.Component
 {
@@ -106,8 +107,8 @@ const mapStateToProps = (state) =>{
 
 const mapDispatchtoProps = (dispatch) =>{
   return{
-    showRightMenu: (event) => {dispatch({type: 'Show_Right_Menu', event: event})},
-    closeRightMenu: () => {dispatch({type: 'Close_Right_Menu'})}
+    showRightMenu: (event) => {dispatch(HomeAction.ShowRightMenu(event))},
+    closeRightMenu: () => {dispatch(HomeAction.CloseRightMenu())}
   }
 }
 

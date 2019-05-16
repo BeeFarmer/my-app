@@ -43,6 +43,12 @@ const navItems = [
           icon: 'NavigateNext'
         },
         {
+          label: 'Info Card',
+          url: BASE_URL + 'components/infocard',
+          icon: 'NavigateNext'
+
+        },
+        {
           label: 'Markdown',
           url: BASE_URL + 'components/markdown',
           icon: 'NavigateNext'
@@ -55,6 +61,11 @@ const navItems = [
 
         },
         {
+          label: 'Nested List',
+          url: BASE_URL + 'components/nestedlist',
+          icon: 'NavigateNext'
+        },
+        {
           label: 'Notification',
           url: BASE_URL + 'components/notification',
           icon: 'NavigateNext'
@@ -65,6 +76,11 @@ const navItems = [
           url: BASE_URL + 'components/progress',
           icon: 'NavigateNext'
 
+        },
+        {
+          label: 'Search Field',
+          url: BASE_URL + 'components/searchfield',
+          icon: 'NavigateNext'
         },
         {
           label: 'Spinner',
@@ -94,6 +110,18 @@ const navItems = [
         {
           label: 'Area',
           url: BASE_URL + 'charts/area',
+          icon: 'NavigateNext'
+
+        },
+        {
+          label: 'Circular Grid Line',
+          url: BASE_URL + 'charts/circulargridline',
+          icon: 'NavigateNext'
+
+        },
+        {
+          label: 'Heatmap',
+          url: BASE_URL + 'charts/heatmap',
           icon: 'NavigateNext'
 
         },
