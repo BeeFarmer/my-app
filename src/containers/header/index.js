@@ -100,8 +100,8 @@ class Header extends React.Component
 
 const mapStateToProps = (state) =>{
   return{
-    anchorEl: state.anchorEl,
-    rightContent: state.rightContent
+    anchorEl: state.headerReducer.anchorEl,
+    rightContent: state.headerReducer.rightContent
   }
 }
 

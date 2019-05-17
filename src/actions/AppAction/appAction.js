@@ -1,6 +1,8 @@
+import Action from "../ActionID/actionID.js";
+
 const LeftMenuOpen = () =>{
   return{
-    type: 'Show_Left_Menu'
+    type: Action.SHOW_LEFT_MENU
   };
 };
 

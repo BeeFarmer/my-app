@@ -26,7 +26,7 @@ const styles = theme => ({
   root: {
     width: '100%',
     paddingTop: theme.spacing.unit * 3,
-    paddingBottom: theme.spacing.unit * 3,
+    paddingBottom: 20,
     overflowX: 'auto',
   },
   table: {
@@ -56,7 +56,7 @@ const rows = [
 function MyTables(props) {
   const { classes } = props;
   let myName = "Table";
-  let output = (<Paper className={classes.root}>
+  let output = (<Paper className={classes.root} elevation={20}>
       <h1 className = "table-title"><b>2016 Summer Olympics Medal Table (ranked by gold metals)</b></h1>
       <Table className={classes.table}>
         <TableHead>

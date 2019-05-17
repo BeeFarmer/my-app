@@ -12,6 +12,7 @@ import MyTables from '../components/contentlist/Components/Tables/tables.js';
 import MyTabs from '../components/contentlist/Components/Tabs/tabs.js';
 import MySpinner from '../components/contentlist/Components/Spinner/spinner.js';
 import MyInfoCard from '../components/contentlist/Components/InfoCard/infoCard.js';
+import MyChips from '../components/contentlist/Components/Chips/chips.js';
 import MyProgress from '../components/contentlist/Components/Progress/progress.js';
 import MyMessageBar from '../components/contentlist/Components/MessageBar/messageBar.js';
 import MyDialog from '../components/contentlist/Components/Dialog/dialog.js';
@@ -64,6 +65,7 @@ class App extends React.Component
              <Route path = "/components/infocard" component = {MyInfoCard} key = "/components/infocard"/>
              <Route path = "/components/messagebar" component = {MyMessageBar} key = "/components/messagebar"/>
              <Route path = "/components/dialog" component = {MyDialog} key = "/components/dialog"/>
+             <Route path = "/components/chips" component = {MyChips} key = "/components/chips"/>
              <Route path = "/components/notification" component = {MyNotification} key = "/components/notification"/>
              <Route path = "/components/avatar" component = {MyAvatar} key = "/components/avatar"/>
              <Route path = "/components/searchfield" component = {MySearchField} key = "/components/searchfield"/>
@@ -95,8 +97,8 @@ class App extends React.Component
 }
 const mapStateToProps = (state) =>{
   return{
-    leftOpen: state.leftOpen,
-    data: state.data
+    leftOpen: state.appReducer.leftOpen,
+    data: state.appReducer.data
   }
 }
 

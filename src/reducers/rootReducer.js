@@ -1,72 +1,14 @@
-import Data from "./data.js";
+import { combineReducers } from 'redux';
+import headerReducer from "./headerReducer.js";
+import appReducer from "./appReducer.js";
+//import templeteReducer from "./templeteReducer.js";
+import navReducer from "./navReducer.js";
 
-const initState =  {
-  anchorEl : null, //control right menu
-  rightContent: Data.rightMenu, // right menu content
-  leftOpen : true, //control left menu
-  data : Data.navItems, //left menu table of contents data
-  value: 0, //central tab display
-  event: null
-}
-
-const rootReducer = (state = initState, action) =>{
-  if(action.type === 'Show_Right_Menu')
-  {
-    console.log(state.target);
-    return{
-      ...state,
-      anchorEl: action.event.currentTarget
-    }
-  }
-  else if(action.type === 'Close_Right_Menu')
-  {
-    return{
-      ...state,
-      anchorEl: null
-    }
-  }
-  else if(action.type === 'Show_Left_Menu')
-  {
-    return{
-      ...state,
-      leftOpen: !state.leftOpen
-    }
-  }
-  else if(action.type === 'Show_Sublist')
-  {
-      return{
-        ...state,
-        [action.oneState]:  !state[action.oneState]
-      }
-
-  }
-  else if(action.type === 'Set_State')
-  {
-    if(action.bool && state[action.oneState] === undefined)
-    {
-      return{
-        ...state,
-        [action.oneState]:  action.bool
-      }
-    }
-  }
-  else if(action.type === 'Switch_Tabs')
-  {
-    return{
-      ...state,
-      value: action.value,
-      event: action.event
-    }
-  }
-  else if(action.type === 'Reset_Tabs_Value')
-  {
-    return{
-      ...state,
-      value: 0
-    }
-  }
-    return state;
-
-}
+const rootReducer = combineReducers({
+  headerReducer,
+  appReducer,
+  //templeteReducer,
+  navReducer
+});
 
 export default rootReducer;

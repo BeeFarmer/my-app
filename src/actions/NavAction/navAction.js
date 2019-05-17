@@ -1,22 +1,19 @@
+import Action from "../ActionID/actionID.js";
+
 const ShowSublist = (oneState) =>{
   return{
-    type: 'Show_Sublist',
+    type: Action.SHOW_SUBLIST,
     oneState: oneState
   };
 };
 
 const SetState = (oneState,bool) =>{
   return{
-    type: 'Set_State',
+    type: Action.SET_STATE,
     oneState: oneState,
     bool: bool
   };
 };
 
-const ResetValue = () =>{
-  return{
-    type: 'Reset_Tabs_Value'
-  };
-};
 
-export default {ShowSublist, SetState, ResetValue};
+export default {ShowSublist, SetState};

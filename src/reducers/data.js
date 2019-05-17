@@ -32,6 +32,12 @@ const navItems = [
 
         },
         {
+          label: 'Chips',
+          url: BASE_URL + 'components/chips',
+          icon: 'NavigateNext'
+
+        },
+        {
           label: 'Dialog',
           url: BASE_URL + 'components/dialog',
           icon: 'NavigateNext'

@@ -1,13 +1,15 @@
+import Action from "../ActionID/actionID.js";
+
 const ShowRightMenu = (event) =>{
   return{
-    type: 'Show_Right_Menu',
+    type: Action.SHOW_RIGHT_MENU,
     event: event
   };
 };
 
 const CloseRightMenu = () => {
   return{
-    type: 'Close_Right_Menu'
+    type: Action.CLOSE_RIGHT_MENU,
   };
 };
 

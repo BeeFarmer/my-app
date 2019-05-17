@@ -13,11 +13,12 @@ class MyTemplete extends React.Component
     this.props.switchTabs(event, value);
   };
 
-
+  resetTabView = () =>{
+    this.props.resetValue();
+  };
 
   render() {
     const { value } = this.props;
-
     return (
       <div className = "root">
         <Paper className="paper" elevation = {20}>
@@ -39,7 +40,7 @@ class MyTemplete extends React.Component
 
 const mapStateToProps = (state) =>{
   return{
-    value: state.value
+    value: state.navReducer.value
   }
 }
 

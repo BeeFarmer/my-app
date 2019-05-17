@@ -8,7 +8,8 @@ import Divider from '@material-ui/core/Divider';
 import { NavLink } from 'react-router-dom';
 import * as Icons from '@material-ui/icons';
 import {connect} from 'react-redux';
-import NavAction from '../../actions/NavAction/navAction.js'
+import NavAction from '../../actions/NavAction/navAction.js';
+import TempleteAction from '../../actions/TempleteAction/templeteAction.js'
 
 class DynamicSideBar extends React.Component
 {
@@ -16,7 +17,7 @@ class DynamicSideBar extends React.Component
    this.props.showSublist(oneState,bool);
  }
 
- resetTabView = () => {
+ resetTabView = () =>{
    this.props.resetValue();
  };
 
@@ -106,8 +107,8 @@ class DynamicSideBar extends React.Component
 
 const mapStateToProps = (state) =>{
   return{
-    data: state.data,
-    state: state,
+    data: state.navReducer.data,
+    state: state.navReducer
   }
 }
 
@@ -115,7 +116,7 @@ const mapDispatchtoProps = (dispatch) =>{
   return{
     showSublist: (oneState) => {dispatch(NavAction.ShowSublist(oneState))},
     setState: (oneState,bool) => {dispatch(NavAction.SetState(oneState, bool))},
-    resetValue: () => {dispatch(NavAction.ResetValue())}
+    resetValue: () => {dispatch(TempleteAction.ResetValue())}
   }
 }
 
