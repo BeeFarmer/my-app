@@ -39,9 +39,6 @@ const styles = theme => ({
 }
 });
 
-function handleDelete() {
-  alert('You clicked the delete icon.'); // eslint-disable-line no-alert
-}
 
 function handleClick() {
   alert('You clicked the Chip.'); // eslint-disable-line no-alert
@@ -74,29 +71,26 @@ function MyChips(props) {
             <SnowIcon />
           </Avatar>
         }
-        label="Clickable Deletable Chip"
+        label="Clickable  Chip"
         onClick={handleClick}
-        onDelete={handleDelete}
         className={classes.chip}
         color = "primary"
       />
       <Chip
         icon={<BedIcon />}
-        label="Clickable Deletable Chip #2"
+        label="Clickable Chip #2"
         onClick={handleClick}
-        onDelete={handleDelete}
         className={classes.chip}
       />
       <Chip
         icon={<FlagIcon />}
-        label="Clickable Deletable Chip #3"
+        label="Clickable Chip #3"
         onClick={handleClick}
-        onDelete={handleDelete}
         className={classes.chip}
         color = "secondary"
       />
       <Chip
-        label="Clickable Link Chip Only"
+        label="Clickable Chip Only"
         className={classes.chip2}
         onClick={handleClick}
         clickable
@@ -107,35 +101,33 @@ function MyChips(props) {
         clickable
         className={classes.chip}
         color="primary"
-        onDelete={handleDelete}
-        deleteIcon={<DoneIcon />}
+
       />
       <Chip
         icon={<BatteryIcon />}
         label="Default Primary Color"
-        onDelete={handleDelete}
         className={classes.chip}
         color="primary"
-        deleteIcon={<DoneIcon />}
+        onClick={handleClick}
+
       />
       <Chip
         icon = {<BlueToothIcon />}
         label="Default Secondary Color"
-        onDelete={handleDelete}
         className={classes.chip}
         color="secondary"
+        onClick={handleClick}
       />
       <Chip
         icon = {<ClockIcon />}
         label="More Example"
-        onDelete={handleDelete}
         className={classes.chip}
       />
       <Chip
         icon = {<MailIcon />}
         label="You Have New Emails"
-        onDelete={handleDelete}
         className={classes.chip4}
+        onClick={handleClick}
       />
     </div>
   );
