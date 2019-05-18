@@ -68,7 +68,7 @@ class App extends React.Component
              <Route path = "/components/spinner" component = {MySpinner} key = "/components/spinner"/>
              <Route path = "/components/progress" component = {MyProgress} key = "/components/progress"/>
              <Route path = "/components/infocard" component = {MyInfoCard} key = "/components/infocard"/>
-             <Route path = "/components/messagebar" component = {MyMessageBar} key = "/components/messagebar"/>
+             //<Route path = "/components/messagebar" component = {MyMessageBar} key = "/components/messagebar"/>
              <Route path = "/components/dialog" component = {MyDialog} key = "/components/dialog"/>
              <Route path = "/components/chips" component = {MyChips} key = "/components/chips"/>
              <Route path = "/components/notification" component = {MyNotification} key = "/components/notification"/>
