@@ -98,7 +98,10 @@ class MyNestedList extends React.Component {
     import ListItemIcon from '@material-ui/core/ListItemIcon';
     import ListItemText from '@material-ui/core/ListItemText';
     import Collapse from '@material-ui/core/Collapse';
+<<<<<<< HEAD
     import React from 'react';
+=======
+>>>>>>> master
 
     return (
       <List>
