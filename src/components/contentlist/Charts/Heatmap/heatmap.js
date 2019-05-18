@@ -51,7 +51,7 @@ class MyHeatmap extends Component
     let output = this.renderHeat();
     let myName = "Heatmap";
     let string = `
-    import {XYPlot, XAxis, YAxis, HeatmapSeries, Hint} from 'react-vis';
+    import {XYPlot, XAxis, YAxis, HeatmapSeries} from 'react-vis';
 
     renderHeat()
     {

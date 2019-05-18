@@ -1,3 +1,9 @@
+/*
+Action(s):
+
+ To toggle right menu open or close
+*/
+
 import Action from "../ActionID/actionID.js";
 
 const ShowRightMenu = (event) =>{

@@ -1,3 +1,8 @@
+/*
+This is central display tab component,
+display rendered content when clicking left menu
+*/
+
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';

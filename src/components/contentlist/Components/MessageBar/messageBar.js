@@ -7,11 +7,20 @@ import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 
 const styles = theme => ({
+  root:{
+    margin: "auto",
+    width: '100%',
+    justifyContent: "Center",
+    marginTop: "50px",
+    marginBottom: "50px",
+    padding: "auto",
+    display:"flex",
+  },
   snackbar1: {
     margin: theme.spacing.unit*3,
     padding: theme.spacing.unit*2,
     color: "forestgreen",
-    fontSize: 15
+    fontSize: 15,
   },
   snackbar2: {
     margin: theme.spacing.unit*3,
@@ -25,7 +34,7 @@ function MyMessageBar(props) {
   const { classes } = props;
 
   let output = (
-    <div>
+    <div className = {classes.root}>
       <SnackbarContent className={classes.snackbar1} message=" Have you finished our assignment?" />
       <SnackbarContent
         className={classes.snackbar2}

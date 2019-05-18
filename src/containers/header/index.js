@@ -1,3 +1,8 @@
+/*
+To render app header,
+including left menu button, home icon, app name, and right menu button
+*/
+
 import React from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import AppBar from '@material-ui/core/AppBar';
@@ -7,7 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import LaunchIcon from '@material-ui/icons/Launch';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import List from '@material-ui/core/List';
@@ -33,7 +38,7 @@ class Header extends React.Component
     let menu = [];
     for( let i in content)
     {
-      menu.push(<MenuItem key = {content[i].label}><a href={content[i].link} target="_blank" rel="noopener noreferrer">{content[i].label}</a></MenuItem>);
+      menu.push(<a href={content[i].link} key = {content[i].label}target="_blank" rel="noopener noreferrer"><MenuItem key = {content[i].label}>{content[i].label}</MenuItem></a>);
     }
     return(
       <div>
@@ -70,9 +75,11 @@ class Header extends React.Component
               <span className = "titleColor">Design Reference</span>
             </Typography>
 
+            <div className = "rightMenuButton">
             <IconButton aria-label="More" aria-haspopup="true" onClick={this.handleClick}>
-              <MoreVertIcon />
+              <LaunchIcon />
             </IconButton>
+            </div>
             <Menu  className="rightMenu" anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={this.handleClose}>
               {output}
            </Menu>

@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import Chip from '@material-ui/core/Chip';
-import FaceIcon from '../../../../assets/images/face.jpg';
-import DoneIcon from '@material-ui/icons/Done';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 import MyTemplete  from '../../../templete';

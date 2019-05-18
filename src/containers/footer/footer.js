@@ -1,3 +1,8 @@
+/*
+This is static bottom footer,
+displaying visiting date
+*/
+
 import React from 'react'
 class Footer extends React.Component {
   render() {

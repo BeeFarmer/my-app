@@ -1,3 +1,8 @@
+/*
+Dynamically retrives information from redux store
+to render left menu, including sub menu
+*/
+
 import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -32,8 +37,8 @@ class DynamicSideBar extends React.Component
                 : this.props.state[node.label];
       this.props.setState(node.label,expand);
         return(
-          <div>
-            <ListItem button onClick={()=>{this.openSubList(node.label,expand)}} key = {node.label}>
+          <div key = {node.label}>
+            <ListItem button onClick={()=>{this.openSubList(node.label,expand)}}>
               <ListItemIcon>
                 <MyIcon />
               </ListItemIcon>
@@ -53,8 +58,8 @@ class DynamicSideBar extends React.Component
     else
     {
       return(
-        <div>
-          <NavLink exact = {node.url === '/'} to={node.url} key={node.label} activeClassName="on-click">
+        <div key={node.label}>
+          <NavLink exact = {node.url === '/'} to={node.url} activeClassName="on-click">
             <ListItem button onClick = {this.resetTabView}>
               <ListItemIcon>
                 <MyIcon />
@@ -97,9 +102,7 @@ class DynamicSideBar extends React.Component
     const { data } = this.props;
     return(
       <div>
-
         {this.listLoop(data)}
-
       </div>
     );
   }

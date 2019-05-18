@@ -1,3 +1,8 @@
+/*
+This is root reducer,
+combining all children reducers.
+*/
+
 import { combineReducers } from 'redux';
 import headerReducer from "./headerReducer.js";
 import appReducer from "./appReducer.js";

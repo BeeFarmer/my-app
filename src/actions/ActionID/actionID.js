@@ -1,3 +1,7 @@
+/*
+Integrate all action IDs in this file
+*/
+
 const SHOW_LEFT_MENU = "Show_Left_Menu";
 const SHOW_RIGHT_MENU = "Show_Right_Menu";
 const CLOSE_RIGHT_MENU = "Close_Right_Menu";

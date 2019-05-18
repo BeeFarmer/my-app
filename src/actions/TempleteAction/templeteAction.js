@@ -1,3 +1,9 @@
+/*
+Action(s):
+
+To toggle central display tab (change tab values)
+*/
+
 import Action from "../ActionID/actionID.js";
 
 const SwitchTabs = (event, value) =>{

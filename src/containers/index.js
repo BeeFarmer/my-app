@@ -1,5 +1,10 @@
+/*
+To render overall app layout,
+including react router configuration
+*/
+
 import React  from 'react';
-import { Route, Switch, HashRouter, BrowserRouter } from 'react-router-dom';
+import { Route, Switch, HashRouter} from 'react-router-dom';
 import "../../node_modules/react-vis/dist/style.css";
 import Header  from './header';
 import MyColor from '../components/contentlist/Colors/colors.js';

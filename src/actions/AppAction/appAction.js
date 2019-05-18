@@ -1,3 +1,9 @@
+/*
+Action(s):
+
+To toggle left menu open or close
+*/
+
 import Action from "../ActionID/actionID.js";
 
 const LeftMenuOpen = () =>{

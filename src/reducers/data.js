@@ -1,3 +1,10 @@
+/*
+Contain information to render left menu,
+including name (label), redirect link(url), and icon name(icon)
+
+Contain information to render right menu,
+including name (label) and redirect link(url)
+*/
 
 const BASE_URL = '/';
 
@@ -57,12 +64,6 @@ const navItems = [
         {
           label: 'Markdown',
           url: BASE_URL + 'components/markdown',
-          icon: 'NavigateNext'
-
-        },
-        {
-          label: 'MessageBar',
-          url: BASE_URL + 'components/messagebar',
           icon: 'NavigateNext'
 
         },
@@ -193,10 +194,6 @@ const rightMenu = [
   {
     label: 'React-Vis',
     link: 'https://github.com/uber/react-vis'
-  },
-  {
-    label: 'Stylus',
-    link: 'http://stylus-lang.com/'
   },
 ];
 

@@ -5,14 +5,11 @@ import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import DirectionsIcon from '@material-ui/icons/Directions';
 import MyTemplete  from '../../../templete';
 import CodeBlock from '../../../';
 import ReactMarkdown from 'react-markdown';
 import Avatar from '@material-ui/core/Avatar';
-import BgIMG from '../../../../assets/images/google.png';
 import MicIcon from '@material-ui/icons/Mic';
 
 

@@ -1,3 +1,15 @@
+/*
+Reducer:
+
+Handle actions when left menu sublists need to be toggled
+Handle actions to expand sublist if needed when refreshing page
+Handle actions when central display tabs need to be switched
+Handle actions when central display tabs need to be reset
+
+Return data to be rendered in left menu, including sublist data
+
+*/
+
 import Data from "./data.js";
 import Action from "../actions/ActionID/actionID.js";
 

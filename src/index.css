@@ -344,6 +344,10 @@ iframe {
 .titleColor {
   color: #fff;
 }
+.rightMenuButton button {
+  padding: 0px;
+  color: #fff;
+}
 .rightMenu ul {
   outline-style: none;
   box-shadow: none;

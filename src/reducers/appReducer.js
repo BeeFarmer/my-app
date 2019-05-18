@@ -1,3 +1,7 @@
+/*
+Handle actions when left menu needs to be toggled
+*/
+
 import Action from "../actions/ActionID/actionID.js";
 
 const initState = {
